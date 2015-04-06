@@ -1,5 +1,5 @@
 {
-  "name": "wing328/SwaggerPetstore-php",
+  "name": "SwaggerPetstore/SwaggerPetstore-php",
   "description": "",
   "keywords": [
     "swagger",
@@ -28,10 +28,5 @@
   },
   "autoload": {
     "psr-4": { "SwaggerPetstore\\" : "lib/" }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "2.0-dev"
-    }
   }
 }

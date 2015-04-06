@@ -17,24 +17,6 @@
 
 namespace SwaggerPetstore;
 
-use \Exception;
-
-/* Autoload the model definition files */
-/**
- *
- * @param string $className the class to attempt to load
- */
-function swagger_autoloader($className) {
-  $currentDir = dirname(__FILE__);
-  if (file_exists($currentDir . '/' . $className . '.php')) {
-    include $currentDir . '/' . $className . '.php';
-  } elseif (file_exists($currentDir . '/models/' . $className . '.php')) {
-    include $currentDir . '/models/' . $className . '.php';
-  }
-}
-spl_autoload_register('SwaggerPetstore\swagger_autoloader');
-
-
 class APIClient {
 
   public static $PATCH = "PATCH";
@@ -313,20 +295,3 @@ class APIClient {
 
 }
 
-class APIClientException extends Exception {
-  protected $response, $response_info;
-
-  public function __construct($message="", $code=0, $response_info=null, $response=null) {
-    parent::__construct($message, $code);
-    $this->response_info = $response_info;
-    $this->response = $response;
-  }
-
-  public function getResponse() {
-    return $this->response;
-  }
-
-  public function getResponseInfo() {
-    return $this->response_info;
-  }
-}
