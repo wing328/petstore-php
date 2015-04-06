@@ -28,10 +28,5 @@
   },
   "autoload": {
     "psr-4": { "SwaggerPetstore\\" : "lib/" }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "2.0-dev"
-    }
   }
 }
