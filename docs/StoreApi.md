@@ -25,7 +25,7 @@ For valid response try integer IDs with value < 1000. Anything above 1000 or non
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\StoreApi();
-$order_id = order_id_example; # string | ID of the order that needs to be deleted
+$order_id = 'order_id_example'; # string | ID of the order that needs to be deleted
 
 try { 
     $api->deleteOrder($order_id);
@@ -78,7 +78,7 @@ Swagger\Client::getDefaultConfiguration->setApiKey('x-test_api_client_secret', '
 #Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('x-test_api_client_secret', 'BEARER');
 
 $api = new Swagger\Client\StoreApi();
-$status = status_example; # string | Status value that needs to be considered for query
+$status = 'status_example'; # string | Status value that needs to be considered for query
 
 try { 
     $result = $api->findOrdersByStatus($status);
@@ -224,7 +224,7 @@ Swagger\Client::getDefaultConfiguration->setApiKey('test_api_key_query', 'YOUR_A
 #Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('test_api_key_query', 'BEARER');
 
 $api = new Swagger\Client\StoreApi();
-$order_id = order_id_example; # string | ID of pet that needs to be fetched
+$order_id = 'order_id_example'; # string | ID of pet that needs to be fetched
 
 try { 
     $result = $api->getOrderById($order_id);
