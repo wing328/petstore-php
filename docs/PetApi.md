@@ -176,7 +176,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$status = array(array("available")); # string[] | Status values that need to be considered for query
+$status = array("available"); # string[] | Status values that need to be considered for query
 
 try { 
     $result = $api->findPetsByStatus($status);
@@ -224,7 +224,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$tags = array(array("tags_example")); # string[] | Tags to filter by
+$tags = array("tags_example"); # string[] | Tags to filter by
 
 try { 
     $result = $api->findPetsByTags($tags);
