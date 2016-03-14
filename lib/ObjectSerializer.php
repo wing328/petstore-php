@@ -241,9 +241,14 @@ class ObjectSerializer
                 $values[] = self::deserialize($value, $subClass);
             }
             $deserialized = $values;
+<<<<<<< HEAD
         } elseif ($class === 'object') {
             settype($data, 'array');
             $deserialized = $data;
+=======
+        } elseif ($class === 'ByteArray') { // byte array
+            $deserialized = unpack('C*', (string)$data);
+>>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         } elseif ($class === '\DateTime') {
             $deserialized = new \DateTime($data);
         } elseif (in_array($class, array('integer', 'int', 'void', 'number', 'object', 'double', 'float', 'byte', 'DateTime', 'string', 'mixed', 'boolean', 'bool'))) {

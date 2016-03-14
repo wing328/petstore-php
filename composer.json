@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "name": "swagger/swagger-client",
+=======
+    "name": "wing328/petstore-php",
+>>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
     "version": "1.0.0",
     "description": "",
     "keywords": [
