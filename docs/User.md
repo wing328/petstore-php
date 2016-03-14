@@ -1,9 +1,4 @@
-# Swagger\Client::Object::User
-
-## Load the model package
-```perl
-use Swagger\Client::Object::User;
-```
+# User
 
 ## Properties
 Name | Type | Description | Notes

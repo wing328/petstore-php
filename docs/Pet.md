@@ -1,9 +1,4 @@
-# Swagger\Client::Object::Pet
-
-## Load the model package
-```perl
-use Swagger\Client::Object::Pet;
-```
+# Pet
 
 ## Properties
 Name | Type | Description | Notes

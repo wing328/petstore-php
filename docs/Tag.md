@@ -1,9 +1,4 @@
-# Swagger\Client::Object::Tag
-
-## Load the model package
-```perl
-use Swagger\Client::Object::Tag;
-```
+# Tag
 
 ## Properties
 Name | Type | Description | Notes

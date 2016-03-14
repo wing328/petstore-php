@@ -1,9 +1,4 @@
-# Swagger\Client::Object::Name
-
-## Load the model package
-```perl
-use Swagger\Client::Object::Name;
-```
+# Name
 
 ## Properties
 Name | Type | Description | Notes

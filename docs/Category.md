@@ -1,9 +1,4 @@
-# Swagger\Client::Object::Category
-
-## Load the model package
-```perl
-use Swagger\Client::Object::Category;
-```
+# Category
 
 ## Properties
 Name | Type | Description | Notes

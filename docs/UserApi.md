@@ -1,10 +1,5 @@
 # Swagger\Client\UserApi
 
-## Load the API package
-```php
-use Swagger\Client::Object::UserApi;
-```
-
 All URIs are relative to *http://petstore.swagger.io/v2*
 
 Method | HTTP request | Description

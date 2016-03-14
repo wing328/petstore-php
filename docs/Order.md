@@ -1,9 +1,4 @@
-# Swagger\Client::Object::Order
-
-## Load the model package
-```perl
-use Swagger\Client::Object::Order;
-```
+# Order
 
 ## Properties
 Name | Type | Description | Notes

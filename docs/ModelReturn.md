@@ -1,9 +1,4 @@
-# Swagger\Client::Object::ModelReturn
-
-## Load the model package
-```perl
-use Swagger\Client::Object::ModelReturn;
-```
+# ModelReturn
 
 ## Properties
 Name | Type | Description | Notes
