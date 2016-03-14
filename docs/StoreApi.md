@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **deleteOrder**
-> deleteOrder(order_id => $order_id)
+> deleteOrder($order_id);
 
 Delete purchase order by ID
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findOrdersByStatus**
-> \Swagger\Client\Model\Order[] findOrdersByStatus(status => $status)
+> \Swagger\Client\Model\Order[] findOrdersByStatus($status);
 
 Finds orders by status
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getInventory**
-> map[string,int] getInventory()
+> map[string,int] getInventory();
 
 Returns pet inventories by status
 
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getInventoryInObject**
-> object getInventoryInObject()
+> object getInventoryInObject();
 
 Fake endpoint to test arbitrary object return by 'Get inventory'
 
@@ -203,7 +203,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getOrderById**
-> \Swagger\Client\Model\Order getOrderById(order_id => $order_id)
+> \Swagger\Client\Model\Order getOrderById($order_id);
 
 Find purchase order by ID
 
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **placeOrder**
-> \Swagger\Client\Model\Order placeOrder(body => $body)
+> \Swagger\Client\Model\Order placeOrder($body);
 
 Place an order for a pet
 

@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **addPet**
-> addPet(body => $body)
+> addPet($body);
 
 Add a new pet to the store
 
@@ -65,7 +65,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **addPetUsingByteArray**
-> addPetUsingByteArray(body => $body)
+> addPetUsingByteArray($body);
 
 Fake endpoint to test byte array in body parameter for adding a new pet to the store
 
@@ -112,7 +112,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deletePet**
-> deletePet(pet_id => $pet_id, api_key => $api_key)
+> deletePet($pet_id, $api_key);
 
 Deletes a pet
 
@@ -161,7 +161,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findPetsByStatus**
-> \Swagger\Client\Model\Pet[] findPetsByStatus(status => $status)
+> \Swagger\Client\Model\Pet[] findPetsByStatus($status);
 
 Finds Pets by status
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findPetsByTags**
-> \Swagger\Client\Model\Pet[] findPetsByTags(tags => $tags)
+> \Swagger\Client\Model\Pet[] findPetsByTags($tags);
 
 Finds Pets by tags
 
@@ -224,7 +224,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$tags = array(nil); # string[] | Tags to filter by
+$tags = array(NULL); # string[] | Tags to filter by
 
 try { 
     $result = $api->findPetsByTags($tags);
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getPetById**
-> \Swagger\Client\Model\Pet getPetById(pet_id => $pet_id)
+> \Swagger\Client\Model\Pet getPetById($pet_id);
 
 Find pet by ID
 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getPetByIdInObject**
-> \Swagger\Client\Model\InlineResponse200 getPetByIdInObject(pet_id => $pet_id)
+> \Swagger\Client\Model\InlineResponse200 getPetByIdInObject($pet_id);
 
 Fake endpoint to test inline arbitrary object return by 'Find pet by ID'
 
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **petPetIdtestingByteArraytrueGet**
-> string petPetIdtestingByteArraytrueGet(pet_id => $pet_id)
+> string petPetIdtestingByteArraytrueGet($pet_id);
 
 Fake endpoint to test byte array return by 'Find pet by ID'
 
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **updatePet**
-> updatePet(body => $body)
+> updatePet($body);
 
 Update an existing pet
 
@@ -460,7 +460,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **updatePetWithForm**
-> updatePetWithForm(pet_id => $pet_id, name => $name, status => $status)
+> updatePetWithForm($pet_id, $name, $status);
 
 Updates a pet in the store with form data
 
@@ -511,7 +511,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uploadFile**
-> uploadFile(pet_id => $pet_id, additional_metadata => $additional_metadata, file => $file)
+> uploadFile($pet_id, $additional_metadata, $file);
 
 uploads an image
 
@@ -528,7 +528,7 @@ Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 $api = new Swagger\Client\PetApi();
 $pet_id = 789; # int | ID of pet to update
 $additional_metadata = additional_metadata_example; # string | Additional data to pass to server
-$file = new Swagger\Client\\SplFileObject(); # \SplFileObject | file to upload
+$file = new\SplFileObject; # \SplFileObject | file to upload
 
 try { 
     $api->uploadFile($pet_id, $additional_metadata, $file);

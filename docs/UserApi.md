@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **createUser**
-> createUser(body => $body)
+> createUser($body);
 
 Create user
 
@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **createUsersWithArrayInput**
-> createUsersWithArrayInput(body => $body)
+> createUsersWithArrayInput($body);
 
 Creates list of users with given input array
 
@@ -103,7 +103,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **createUsersWithListInput**
-> createUsersWithListInput(body => $body)
+> createUsersWithListInput($body);
 
 Creates list of users with given input array
 
@@ -147,7 +147,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deleteUser**
-> deleteUser(username => $username)
+> deleteUser($username);
 
 Delete user
 
@@ -195,7 +195,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getUserByName**
-> \Swagger\Client\Model\User getUserByName(username => $username)
+> \Swagger\Client\Model\User getUserByName($username);
 
 Get user by user name
 
@@ -240,7 +240,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **loginUser**
-> string loginUser(username => $username, password => $password)
+> string loginUser($username, $password);
 
 Logs user into the system
 
@@ -287,7 +287,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **logoutUser**
-> logoutUser()
+> logoutUser();
 
 Logs out current logged in user session
 
@@ -327,7 +327,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **updateUser**
-> updateUser(username => $username, body => $body)
+> updateUser($username, $body);
 
 Updated user
 
