@@ -27,7 +27,7 @@ This can only be done by the logged in user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
-$body = new \Swagger\Client\Model\User(); # \Swagger\Client\Model\User | Created user object
+$body = NULL; # \Swagger\Client\Model\User | Created user object
 
 try { 
     $api->createUser($body);
@@ -71,7 +71,7 @@ Creates list of users with given input array
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
-$body = array(new User()); # \Swagger\Client\Model\User[] | List of user object
+$body = NULL; # \Swagger\Client\Model\User[] | List of user object
 
 try { 
     $api->createUsersWithArrayInput($body);
@@ -115,7 +115,7 @@ Creates list of users with given input array
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
-$body = array(new User()); # \Swagger\Client\Model\User[] | List of user object
+$body = NULL; # \Swagger\Client\Model\User[] | List of user object
 
 try { 
     $api->createUsersWithListInput($body);
@@ -163,7 +163,7 @@ Swagger\Client::getDefaultConfiguration->setUusername('YOUR_USERNAME');
 Swagger\Client::getDefaultConfiguration->setPassword('YOUR_PASSWORD');
 
 $api = new Swagger\Client\UserApi();
-$username = "username_example"; # string | The name that needs to be deleted
+$username = username_example; # string | The name that needs to be deleted
 
 try { 
     $api->deleteUser($username);
@@ -207,7 +207,7 @@ Get user by user name
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
-$username = "username_example"; # string | The name that needs to be fetched. Use user1 for testing.
+$username = username_example; # string | The name that needs to be fetched. Use user1 for testing.
 
 try { 
     $result = $api->getUserByName($username);
@@ -252,8 +252,8 @@ Logs user into the system
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
-$username = "username_example"; # string | The user name for login
-$password = "password_example"; # string | The password for login in clear text
+$username = username_example; # string | The user name for login
+$password = password_example; # string | The password for login in clear text
 
 try { 
     $result = $api->loginUser($username, $password);
@@ -339,8 +339,8 @@ This can only be done by the logged in user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
-$username = "username_example"; # string | name that need to be deleted
-$body = new \Swagger\Client\Model\User(); # \Swagger\Client\Model\User | Updated user object
+$username = username_example; # string | name that need to be deleted
+$body = NULL; # \Swagger\Client\Model\User | Updated user object
 
 try { 
     $api->updateUser($username, $body);
