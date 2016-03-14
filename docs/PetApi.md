@@ -34,7 +34,7 @@ require __DIR__ . '/vendor/autoload.php';
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$body = \Swagger\Client\Model\Pet->new(); # [\Swagger\Client\Model\Pet] Pet object that needs to be added to the store
+$body = \Swagger\Client\Model\Pet->new(); # \Swagger\Client\Model\Pet | Pet object that needs to be added to the store
 
 try { 
     $api->addPet($body);
@@ -82,7 +82,7 @@ require __DIR__ . '/vendor/autoload.php';
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$body = string->new(); # [string] Pet object in the form of byte array
+$body = string->new(); # string | Pet object in the form of byte array
 
 try { 
     $api->addPetUsingByteArray($body);
@@ -130,8 +130,8 @@ require __DIR__ . '/vendor/autoload.php';
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$pet_id = 789; # [int] Pet id to delete
-$api_key = api_key_example; # [string] 
+$pet_id = 789; # int | Pet id to delete
+$api_key = api_key_example; # string | 
 
 try { 
     $api->deletePet($pet_id, $api_key);
@@ -180,7 +180,7 @@ require __DIR__ . '/vendor/autoload.php';
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$status = array(array(available)); # [string[]] Status values that need to be considered for query
+$status = array(array(available)); # string[] | Status values that need to be considered for query
 
 try { 
     $result = $api->findPetsByStatus($status);
@@ -229,7 +229,7 @@ require __DIR__ . '/vendor/autoload.php';
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$tags = array(nil); # [string[]] Tags to filter by
+$tags = array(nil); # string[] | Tags to filter by
 
 try { 
     $result = $api->findPetsByTags($tags);
@@ -276,13 +276,13 @@ require __DIR__ . '/vendor/autoload.php';
 
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
-# uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+# Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
 #Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER';
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$pet_id = 789; # [int] ID of pet that needs to be fetched
+$pet_id = 789; # int | ID of pet that needs to be fetched
 
 try { 
     $result = $api->getPetById($pet_id);
@@ -329,13 +329,13 @@ require __DIR__ . '/vendor/autoload.php';
 
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
-# uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+# Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
 #Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER';
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$pet_id = 789; # [int] ID of pet that needs to be fetched
+$pet_id = 789; # int | ID of pet that needs to be fetched
 
 try { 
     $result = $api->getPetByIdInObject($pet_id);
@@ -382,13 +382,13 @@ require __DIR__ . '/vendor/autoload.php';
 
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
-# uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+# Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
 #Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER';
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$pet_id = 789; # [int] ID of pet that needs to be fetched
+$pet_id = 789; # int | ID of pet that needs to be fetched
 
 try { 
     $result = $api->petPetIdtestingByteArraytrueGet($pet_id);
@@ -437,7 +437,7 @@ require __DIR__ . '/vendor/autoload.php';
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$body = \Swagger\Client\Model\Pet->new(); # [\Swagger\Client\Model\Pet] Pet object that needs to be added to the store
+$body = \Swagger\Client\Model\Pet->new(); # \Swagger\Client\Model\Pet | Pet object that needs to be added to the store
 
 try { 
     $api->updatePet($body);
@@ -485,9 +485,9 @@ require __DIR__ . '/vendor/autoload.php';
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$pet_id = pet_id_example; # [string] ID of pet that needs to be updated
-$name = name_example; # [string] Updated name of the pet
-$status = status_example; # [string] Updated status of the pet
+$pet_id = pet_id_example; # string | ID of pet that needs to be updated
+$name = name_example; # string | Updated name of the pet
+$status = status_example; # string | Updated status of the pet
 
 try { 
     $api->updatePetWithForm($pet_id, $name, $status);
@@ -537,9 +537,9 @@ require __DIR__ . '/vendor/autoload.php';
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$pet_id = 789; # [int] ID of pet to update
-$additional_metadata = additional_metadata_example; # [string] Additional data to pass to server
-$file = new Swagger\Client\\SplFileObject(); # [\SplFileObject] file to upload
+$pet_id = 789; # int | ID of pet to update
+$additional_metadata = additional_metadata_example; # string | Additional data to pass to server
+$file = new Swagger\Client\\SplFileObject(); # \SplFileObject | file to upload
 
 try { 
     $api->uploadFile($pet_id, $additional_metadata, $file);
