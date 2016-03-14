@@ -71,7 +71,7 @@ Creates list of users with given input array
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
-$body = array(new \Swagger\Client\Model\User[]); # \Swagger\Client\Model\User[] | List of user object
+$body = array(new User); # \Swagger\Client\Model\User[] | List of user object
 
 try { 
     $api->createUsersWithArrayInput($body);
@@ -115,7 +115,7 @@ Creates list of users with given input array
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
-$body = array(new \Swagger\Client\Model\User[]); # \Swagger\Client\Model\User[] | List of user object
+$body = array(new User); # \Swagger\Client\Model\User[] | List of user object
 
 try { 
     $api->createUsersWithListInput($body);
