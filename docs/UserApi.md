@@ -1,8 +1,8 @@
-# ::UserApi
+# Swagger\Client\UserApi
 
 ## Load the API package
-```perl
-use ::Object::UserApi;
+```php
+use Swagger\Client::Object::UserApi;
 ```
 
 All URIs are relative to *http://petstore.swagger.io/v2*
@@ -28,10 +28,9 @@ This can only be done by the logged in user.
 
 ### Example 
 ```perl
-use Data::Dumper;
 
-my $api = ::UserApi->new();
-my $body = ::Object::\Swagger\Client\Model\User->new(); # [\Swagger\Client\Model\User] Created user object
+my $api = new Swagger\Client\UserApi();
+my $body = Swagger\Client::Object::\Swagger\Client\Model\User->new(); # [\Swagger\Client\Model\User] Created user object
 
 eval { 
     $api->createUser(body => $body);
@@ -71,10 +70,9 @@ Creates list of users with given input array
 
 ### Example 
 ```perl
-use Data::Dumper;
 
-my $api = ::UserApi->new();
-my $body = (::Object::\Swagger\Client\Model\User[]->new()); # [\Swagger\Client\Model\User[]] List of user object
+my $api = new Swagger\Client\UserApi();
+my $body = (Swagger\Client::Object::\Swagger\Client\Model\User[]->new()); # [\Swagger\Client\Model\User[]] List of user object
 
 eval { 
     $api->createUsersWithArrayInput(body => $body);
@@ -114,10 +112,9 @@ Creates list of users with given input array
 
 ### Example 
 ```perl
-use Data::Dumper;
 
-my $api = ::UserApi->new();
-my $body = (::Object::\Swagger\Client\Model\User[]->new()); # [\Swagger\Client\Model\User[]] List of user object
+my $api = new Swagger\Client\UserApi();
+my $body = (Swagger\Client::Object::\Swagger\Client\Model\User[]->new()); # [\Swagger\Client\Model\User[]] List of user object
 
 eval { 
     $api->createUsersWithListInput(body => $body);
@@ -157,13 +154,12 @@ This can only be done by the logged in user.
 
 ### Example 
 ```perl
-use Data::Dumper;
 
 # Configure HTTP basic authorization: test_http_basic
-::Configuration::username = 'YOUR_USERNAME';
-::Configuration::password = 'YOUR_PASSWORD';
+Swagger\Client::getDefaultConfiguration->setUusername('YOUR_USERNAME');
+Swagger\Client::getDefaultConfiguration->setPassword('YOUR_PASSWORD');
 
-my $api = ::UserApi->new();
+my $api = new Swagger\Client\UserApi();
 my $username = username_example; # [string] The name that needs to be deleted
 
 eval { 
@@ -204,14 +200,13 @@ Get user by user name
 
 ### Example 
 ```perl
-use Data::Dumper;
 
-my $api = ::UserApi->new();
+my $api = new Swagger\Client\UserApi();
 my $username = username_example; # [string] The name that needs to be fetched. Use user1 for testing.
 
 eval { 
     my $result = $api->getUserByName(username => $username);
-    print Dumper($result);
+    print_r($result);
 };
 if ($@) {
     warn "Exception when calling UserApi->getUserByName: $@\n";
@@ -248,15 +243,14 @@ Logs user into the system
 
 ### Example 
 ```perl
-use Data::Dumper;
 
-my $api = ::UserApi->new();
+my $api = new Swagger\Client\UserApi();
 my $username = username_example; # [string] The user name for login
 my $password = password_example; # [string] The password for login in clear text
 
 eval { 
     my $result = $api->loginUser(username => $username, password => $password);
-    print Dumper($result);
+    print_r($result);
 };
 if ($@) {
     warn "Exception when calling UserApi->loginUser: $@\n";
@@ -294,9 +288,8 @@ Logs out current logged in user session
 
 ### Example 
 ```perl
-use Data::Dumper;
 
-my $api = ::UserApi->new();
+my $api = new Swagger\Client\UserApi();
 
 eval { 
     $api->logoutUser();
@@ -333,11 +326,10 @@ This can only be done by the logged in user.
 
 ### Example 
 ```perl
-use Data::Dumper;
 
-my $api = ::UserApi->new();
+my $api = new Swagger\Client\UserApi();
 my $username = username_example; # [string] name that need to be deleted
-my $body = ::Object::\Swagger\Client\Model\User->new(); # [\Swagger\Client\Model\User] Updated user object
+my $body = Swagger\Client::Object::\Swagger\Client\Model\User->new(); # [\Swagger\Client\Model\User] Updated user object
 
 eval { 
     $api->updateUser(username => $username, body => $body);
