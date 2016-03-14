@@ -24,8 +24,7 @@ This can only be done by the logged in user.
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
 $body = \Swagger\Client\Model\User->new(); # \Swagger\Client\Model\User | Created user object
@@ -69,8 +68,7 @@ Creates list of users with given input array
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
 $body = array(\Swagger\Client\Model\User[]->new()); # \Swagger\Client\Model\User[] | List of user object
@@ -114,8 +112,7 @@ Creates list of users with given input array
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
 $body = array(\Swagger\Client\Model\User[]->new()); # \Swagger\Client\Model\User[] | List of user object
@@ -159,8 +156,7 @@ This can only be done by the logged in user.
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure HTTP basic authorization: test_http_basic
 Swagger\Client::getDefaultConfiguration->setUusername('YOUR_USERNAME');
@@ -208,8 +204,7 @@ Get user by user name
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
 $username = username_example; # string | The name that needs to be fetched. Use user1 for testing.
@@ -254,8 +249,7 @@ Logs user into the system
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
 $username = username_example; # string | The user name for login
@@ -302,8 +296,7 @@ Logs out current logged in user session
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
 
@@ -343,8 +336,7 @@ This can only be done by the logged in user.
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\UserApi();
 $username = username_example; # string | name that need to be deleted

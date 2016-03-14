@@ -27,8 +27,7 @@ Add a new pet to the store
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -75,8 +74,7 @@ Fake endpoint to test byte array in body parameter for adding a new pet to the s
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -123,8 +121,7 @@ Deletes a pet
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -173,8 +170,7 @@ Multiple status values can be provided with comma separated strings
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -222,8 +218,7 @@ Muliple tags can be provided with comma seperated strings. Use tag1, tag2, tag3 
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -271,8 +266,7 @@ Returns a pet when ID < 10.  ID > 10 or nonintegers will simulate API error cond
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
@@ -324,8 +318,7 @@ Returns a pet when ID < 10.  ID > 10 or nonintegers will simulate API error cond
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
@@ -377,8 +370,7 @@ Returns a pet when ID < 10.  ID > 10 or nonintegers will simulate API error cond
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
@@ -430,8 +422,7 @@ Update an existing pet
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -478,8 +469,7 @@ Updates a pet in the store with form data
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -530,8 +520,7 @@ uploads an image
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');

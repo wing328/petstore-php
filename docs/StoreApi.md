@@ -22,8 +22,7 @@ For valid response try integer IDs with value < 1000. Anything above 1000 or non
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 $api = new Swagger\Client\StoreApi();
 $order_id = order_id_example; # string | ID of the order that needs to be deleted
@@ -67,8 +66,7 @@ A single status value can be provided as a string
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure API key authorization: test_api_client_id
 Swagger\Client::getDefaultConfiguration->setApiKey('x-test_api_client_id', 'YOUR_API_KEY');
@@ -122,8 +120,7 @@ Returns a map of status codes to quantities
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
@@ -169,8 +166,7 @@ Returns an arbitrary object which is actually a map of status codes to quantitie
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
@@ -216,8 +212,7 @@ For valid response try integer IDs with value <= 5 or > 10. Other values will ge
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure API key authorization: test_api_key_header
 Swagger\Client::getDefaultConfiguration->setApiKey('test_api_key_header', 'YOUR_API_KEY');
@@ -271,8 +266,7 @@ Place an order for a pet
 ### Example 
 ```php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
+require_once(__DIR__ . '/vendor/autoload.php');
 
 # Configure API key authorization: test_api_client_id
 Swagger\Client::getDefaultConfiguration->setApiKey('x-test_api_client_id', 'YOUR_API_KEY');
