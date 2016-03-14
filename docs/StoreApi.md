@@ -278,7 +278,7 @@ Swagger\Client::getDefaultConfiguration->setApiKey('x-test_api_client_secret', '
 #Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('x-test_api_client_secret', 'BEARER';
 
 $api = new Swagger\Client\StoreApi();
-$body = \Swagger\Client\Model\Order->new(); # \Swagger\Client\Model\Order | order placed for purchasing the pet
+$body = new \Swagger\Client\Model\Order; # \Swagger\Client\Model\Order | order placed for purchasing the pet
 
 try { 
     $result = $api->placeOrder($body);
