@@ -71,11 +71,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 # Configure API key authorization: test_api_client_id
 Swagger\Client::getDefaultConfiguration->setApiKey('x-test_api_client_id', 'YOUR_API_KEY');
 # Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('x-test_api_client_id', 'BEARER';
+#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('x-test_api_client_id', 'BEARER');
 # Configure API key authorization: test_api_client_secret
 Swagger\Client::getDefaultConfiguration->setApiKey('x-test_api_client_secret', 'YOUR_API_KEY');
 # Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('x-test_api_client_secret', 'BEARER';
+#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('x-test_api_client_secret', 'BEARER');
 
 $api = new Swagger\Client\StoreApi();
 $status = "placed"; # string | Status value that needs to be considered for query
@@ -125,7 +125,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
 # Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER';
+#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER');
 
 $api = new Swagger\Client\StoreApi();
 
@@ -171,7 +171,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
 # Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER';
+#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER');
 
 $api = new Swagger\Client\StoreApi();
 
@@ -217,11 +217,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 # Configure API key authorization: test_api_key_header
 Swagger\Client::getDefaultConfiguration->setApiKey('test_api_key_header', 'YOUR_API_KEY');
 # Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('test_api_key_header', 'BEARER';
+#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('test_api_key_header', 'BEARER');
 # Configure API key authorization: test_api_key_query
 Swagger\Client::getDefaultConfiguration->setApiKey('test_api_key_query', 'YOUR_API_KEY');
 # Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('test_api_key_query', 'BEARER';
+#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('test_api_key_query', 'BEARER');
 
 $api = new Swagger\Client\StoreApi();
 $order_id = "order_id_example"; # string | ID of pet that needs to be fetched
@@ -271,11 +271,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 # Configure API key authorization: test_api_client_id
 Swagger\Client::getDefaultConfiguration->setApiKey('x-test_api_client_id', 'YOUR_API_KEY');
 # Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('x-test_api_client_id', 'BEARER';
+#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('x-test_api_client_id', 'BEARER');
 # Configure API key authorization: test_api_client_secret
 Swagger\Client::getDefaultConfiguration->setApiKey('x-test_api_client_secret', 'YOUR_API_KEY');
 # Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('x-test_api_client_secret', 'BEARER';
+#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('x-test_api_client_secret', 'BEARER');
 
 $api = new Swagger\Client\StoreApi();
 $body = new \Swagger\Client\Model\Order(); # \Swagger\Client\Model\Order | order placed for purchasing the pet

@@ -271,7 +271,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
 # Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER';
+#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER');
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -323,7 +323,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
 # Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER';
+#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER');
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -375,7 +375,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 # Configure API key authorization: api_key
 Swagger\Client::getDefaultConfiguration->setApiKey('api_key', 'YOUR_API_KEY');
 # Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER';
+#Swagger\Client::getDefaultConfiguration->setApiKeyPrefix('api_key', 'BEARER');
 # Configure OAuth2 access token for authorization: petstore_auth
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
