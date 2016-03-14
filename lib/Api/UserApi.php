@@ -329,7 +329,6 @@ class UserApi
     }
     
     /**
-<<<<<<< HEAD
      * deleteUser
      *
      * Delete user
@@ -341,26 +340,11 @@ class UserApi
     public function deleteUser($username)
     {
         list($response, $statusCode, $httpHeader) = $this->deleteUserWithHttpInfo ($username);
-=======
-     * loginUser
-     *
-     * Logs user into the system
-     *
-     * @param string $username The user name for login (optional)
-     * @param string $password The password for login in clear text (optional)
-     * @return string
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     */
-    public function loginUser($username = null, $password = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->loginUserWithHttpInfo ($username, $password);
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         return $response; 
     }
 
 
     /**
-<<<<<<< HEAD
      * deleteUserWithHttpInfo
      *
      * Delete user
@@ -379,23 +363,6 @@ class UserApi
   
         // parse inputs
         $resourcePath = "/user/{username}";
-=======
-     * loginUserWithHttpInfo
-     *
-     * Logs user into the system
-     *
-     * @param string $username The user name for login (optional)
-     * @param string $password The password for login in clear text (optional)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     */
-    public function loginUserWithHttpInfo($username = null, $password = null)
-    {
-        
-  
-        // parse inputs
-        $resourcePath = "/user/login";
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -406,7 +373,6 @@ class UserApi
         }
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array());
   
-<<<<<<< HEAD
         
         
         // path params
@@ -418,19 +384,6 @@ class UserApi
                 $resourcePath
             );
         }
-=======
-        // query params
-        
-        if ($username !== null) {
-            $queryParams['username'] = $this->apiClient->getSerializer()->toQueryValue($username);
-        }// query params
-        
-        if ($password !== null) {
-            $queryParams['password'] = $this->apiClient->getSerializer()->toQueryValue($password);
-        }
-        
-        
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
@@ -444,7 +397,6 @@ class UserApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-<<<<<<< HEAD
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
             $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
@@ -462,28 +414,6 @@ class UserApi
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
-=======
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, 'string'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\Swagger\Client\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \Swagger\Client\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
             }
   
             throw $e;
@@ -491,7 +421,6 @@ class UserApi
     }
     
     /**
-<<<<<<< HEAD
      * getUserByName
      *
      * Get user by user name
@@ -503,24 +432,11 @@ class UserApi
     public function getUserByName($username)
     {
         list($response, $statusCode, $httpHeader) = $this->getUserByNameWithHttpInfo ($username);
-=======
-     * logoutUser
-     *
-     * Logs out current logged in user session
-     *
-     * @return void
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     */
-    public function logoutUser()
-    {
-        list($response, $statusCode, $httpHeader) = $this->logoutUserWithHttpInfo ();
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         return $response; 
     }
 
 
     /**
-<<<<<<< HEAD
      * getUserByNameWithHttpInfo
      *
      * Get user by user name
@@ -539,21 +455,6 @@ class UserApi
   
         // parse inputs
         $resourcePath = "/user/{username}";
-=======
-     * logoutUserWithHttpInfo
-     *
-     * Logs out current logged in user session
-     *
-     * @return Array of null, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     */
-    public function logoutUserWithHttpInfo()
-    {
-        
-  
-        // parse inputs
-        $resourcePath = "/user/logout";
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -566,7 +467,6 @@ class UserApi
   
         
         
-<<<<<<< HEAD
         // path params
         
         if ($username !== null) {
@@ -576,9 +476,6 @@ class UserApi
                 $resourcePath
             );
         }
-=======
-        
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
@@ -597,7 +494,6 @@ class UserApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-<<<<<<< HEAD
                 $headerParams, '\Swagger\Client\Model\User'
             );
             
@@ -613,15 +509,6 @@ class UserApi
                 $data = \Swagger\Client\ObjectSerializer::deserialize($e->getResponseBody(), '\Swagger\Client\Model\User', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
-=======
-                $headerParams
-            );
-            
-            return array(null, $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
             }
   
             throw $e;
@@ -629,7 +516,6 @@ class UserApi
     }
     
     /**
-<<<<<<< HEAD
      * loginUser
      *
      * Logs user into the system
@@ -642,25 +528,11 @@ class UserApi
     public function loginUser($username = null, $password = null)
     {
         list($response, $statusCode, $httpHeader) = $this->loginUserWithHttpInfo ($username, $password);
-=======
-     * getUserByName
-     *
-     * Get user by user name
-     *
-     * @param string $username The name that needs to be fetched. Use user1 for testing. (required)
-     * @return \Swagger\Client\Model\User
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     */
-    public function getUserByName($username)
-    {
-        list($response, $statusCode, $httpHeader) = $this->getUserByNameWithHttpInfo ($username);
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         return $response; 
     }
 
 
     /**
-<<<<<<< HEAD
      * loginUserWithHttpInfo
      *
      * Logs user into the system
@@ -676,26 +548,6 @@ class UserApi
   
         // parse inputs
         $resourcePath = "/user/login";
-=======
-     * getUserByNameWithHttpInfo
-     *
-     * Get user by user name
-     *
-     * @param string $username The name that needs to be fetched. Use user1 for testing. (required)
-     * @return Array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     */
-    public function getUserByNameWithHttpInfo($username)
-    {
-        
-        // verify the required parameter 'username' is set
-        if ($username === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $username when calling getUserByName');
-        }
-  
-        // parse inputs
-        $resourcePath = "/user/{username}";
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -706,7 +558,6 @@ class UserApi
         }
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array());
   
-<<<<<<< HEAD
         // query params
         
         if ($username !== null) {
@@ -718,19 +569,6 @@ class UserApi
         }
         
         
-=======
-        
-        
-        // path params
-        
-        if ($username !== null) {
-            $resourcePath = str_replace(
-                "{" . "username" . "}",
-                $this->apiClient->getSerializer()->toPathValue($username),
-                $resourcePath
-            );
-        }
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
@@ -749,31 +587,19 @@ class UserApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-<<<<<<< HEAD
                 $headerParams, 'string'
-=======
-                $headerParams, '\Swagger\Client\Model\User'
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-<<<<<<< HEAD
             return array(\Swagger\Client\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
-=======
-            return array(\Swagger\Client\ObjectSerializer::deserialize($response, '\Swagger\Client\Model\User', $httpHeader), $statusCode, $httpHeader);
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-<<<<<<< HEAD
                 $data = \Swagger\Client\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
-=======
-                $data = \Swagger\Client\ObjectSerializer::deserialize($e->getResponseBody(), '\Swagger\Client\Model\User', $e->getResponseHeaders());
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
                 $e->setResponseObject($data);
                 break;
             }
@@ -783,7 +609,6 @@ class UserApi
     }
     
     /**
-<<<<<<< HEAD
      * logoutUser
      *
      * Logs out current logged in user session
@@ -794,26 +619,11 @@ class UserApi
     public function logoutUser()
     {
         list($response, $statusCode, $httpHeader) = $this->logoutUserWithHttpInfo ();
-=======
-     * updateUser
-     *
-     * Updated user
-     *
-     * @param string $username name that need to be deleted (required)
-     * @param \Swagger\Client\Model\User $body Updated user object (optional)
-     * @return void
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     */
-    public function updateUser($username, $body = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->updateUserWithHttpInfo ($username, $body);
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         return $response; 
     }
 
 
     /**
-<<<<<<< HEAD
      * logoutUserWithHttpInfo
      *
      * Logs out current logged in user session
@@ -827,27 +637,6 @@ class UserApi
   
         // parse inputs
         $resourcePath = "/user/logout";
-=======
-     * updateUserWithHttpInfo
-     *
-     * Updated user
-     *
-     * @param string $username name that need to be deleted (required)
-     * @param \Swagger\Client\Model\User $body Updated user object (optional)
-     * @return Array of null, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     */
-    public function updateUserWithHttpInfo($username, $body = null)
-    {
-        
-        // verify the required parameter 'username' is set
-        if ($username === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $username when calling updateUser');
-        }
-  
-        // parse inputs
-        $resourcePath = "/user/{username}";
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -860,32 +649,12 @@ class UserApi
   
         
         
-<<<<<<< HEAD
         
-=======
-        // path params
-        
-        if ($username !== null) {
-            $resourcePath = str_replace(
-                "{" . "username" . "}",
-                $this->apiClient->getSerializer()->toPathValue($username),
-                $resourcePath
-            );
-        }
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-<<<<<<< HEAD
         
-=======
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
   
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -897,11 +666,7 @@ class UserApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-<<<<<<< HEAD
                 $resourcePath, 'GET',
-=======
-                $resourcePath, 'PUT',
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
                 $queryParams, $httpBody,
                 $headerParams
             );
@@ -917,7 +682,6 @@ class UserApi
     }
     
     /**
-<<<<<<< HEAD
      * updateUser
      *
      * Updated user
@@ -930,25 +694,11 @@ class UserApi
     public function updateUser($username, $body = null)
     {
         list($response, $statusCode, $httpHeader) = $this->updateUserWithHttpInfo ($username, $body);
-=======
-     * deleteUser
-     *
-     * Delete user
-     *
-     * @param string $username The name that needs to be deleted (required)
-     * @return void
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     */
-    public function deleteUser($username)
-    {
-        list($response, $statusCode, $httpHeader) = $this->deleteUserWithHttpInfo ($username);
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         return $response; 
     }
 
 
     /**
-<<<<<<< HEAD
      * updateUserWithHttpInfo
      *
      * Updated user
@@ -959,26 +709,11 @@ class UserApi
      * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function updateUserWithHttpInfo($username, $body = null)
-=======
-     * deleteUserWithHttpInfo
-     *
-     * Delete user
-     *
-     * @param string $username The name that needs to be deleted (required)
-     * @return Array of null, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     */
-    public function deleteUserWithHttpInfo($username)
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
     {
         
         // verify the required parameter 'username' is set
         if ($username === null) {
-<<<<<<< HEAD
             throw new \InvalidArgumentException('Missing the required parameter $username when calling updateUser');
-=======
-            throw new \InvalidArgumentException('Missing the required parameter $username when calling deleteUser');
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
         }
   
         // parse inputs
@@ -1008,15 +743,11 @@ class UserApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-<<<<<<< HEAD
         // body params
         $_tempBody = null;
         if (isset($body)) {
             $_tempBody = $body;
         }
-=======
-        
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
   
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1028,11 +759,7 @@ class UserApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-<<<<<<< HEAD
                 $resourcePath, 'PUT',
-=======
-                $resourcePath, 'DELETE',
->>>>>>> 43c0c359d3be3bcd7168b43937abd3341cc4207f
                 $queryParams, $httpBody,
                 $headerParams
             );
