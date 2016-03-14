@@ -33,7 +33,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$body = new \Swagger\Client\Model\Pet; # \Swagger\Client\Model\Pet | Pet object that needs to be added to the store
+$body = new \Swagger\Client\Model\Pet(); # \Swagger\Client\Model\Pet | Pet object that needs to be added to the store
 
 try { 
     $api->addPet($body);
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$body = new string; # string | Pet object in the form of byte array
+$body = new string(); # string | Pet object in the form of byte array
 
 try { 
     $api->addPetUsingByteArray($body);
@@ -428,7 +428,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client::getDefaultConfiguration->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api = new Swagger\Client\PetApi();
-$body = new \Swagger\Client\Model\Pet; # \Swagger\Client\Model\Pet | Pet object that needs to be added to the store
+$body = new \Swagger\Client\Model\Pet(); # \Swagger\Client\Model\Pet | Pet object that needs to be added to the store
 
 try { 
     $api->updatePet($body);
