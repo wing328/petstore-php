@@ -1,8 +1,8 @@
-# ::Object::ModelReturn
+# Swagger\Client::Object::ModelReturn
 
 ## Load the model package
 ```perl
-use ::Object::ModelReturn;
+use Swagger\Client::Object::ModelReturn;
 ```
 
 ## Properties

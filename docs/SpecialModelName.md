@@ -1,8 +1,8 @@
-# ::Object::SpecialModelName
+# Swagger\Client::Object::SpecialModelName
 
 ## Load the model package
 ```perl
-use ::Object::SpecialModelName;
+use Swagger\Client::Object::SpecialModelName;
 ```
 
 ## Properties

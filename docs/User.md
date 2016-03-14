@@ -1,8 +1,8 @@
-# ::Object::User
+# Swagger\Client::Object::User
 
 ## Load the model package
 ```perl
-use ::Object::User;
+use Swagger\Client::Object::User;
 ```
 
 ## Properties

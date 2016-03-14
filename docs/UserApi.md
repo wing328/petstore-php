@@ -27,17 +27,20 @@ Create user
 This can only be done by the logged in user.
 
 ### Example 
-```perl
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
 
-my $api = new Swagger\Client\UserApi();
-my $body = Swagger\Client::Object::\Swagger\Client\Model\User->new(); # [\Swagger\Client\Model\User] Created user object
 
-eval { 
-    $api->createUser(body => $body);
-};
-if ($@) {
-    warn "Exception when calling UserApi->createUser: $@\n";
-}
+$api = new Swagger\Client\UserApi();
+$body = \Swagger\Client\Model\User->new(); # [\Swagger\Client\Model\User] Created user object
+
+try { 
+    $api->createUser($body);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->createUser: ', $e->getMessage(), "\n";
+} 
+?>
 ```
 
 ### Parameters
@@ -69,17 +72,20 @@ Creates list of users with given input array
 
 
 ### Example 
-```perl
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
 
-my $api = new Swagger\Client\UserApi();
-my $body = (Swagger\Client::Object::\Swagger\Client\Model\User[]->new()); # [\Swagger\Client\Model\User[]] List of user object
 
-eval { 
-    $api->createUsersWithArrayInput(body => $body);
-};
-if ($@) {
-    warn "Exception when calling UserApi->createUsersWithArrayInput: $@\n";
-}
+$api = new Swagger\Client\UserApi();
+$body = array(\Swagger\Client\Model\User[]->new()); # [\Swagger\Client\Model\User[]] List of user object
+
+try { 
+    $api->createUsersWithArrayInput($body);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->createUsersWithArrayInput: ', $e->getMessage(), "\n";
+} 
+?>
 ```
 
 ### Parameters
@@ -111,17 +117,20 @@ Creates list of users with given input array
 
 
 ### Example 
-```perl
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
 
-my $api = new Swagger\Client\UserApi();
-my $body = (Swagger\Client::Object::\Swagger\Client\Model\User[]->new()); # [\Swagger\Client\Model\User[]] List of user object
 
-eval { 
-    $api->createUsersWithListInput(body => $body);
-};
-if ($@) {
-    warn "Exception when calling UserApi->createUsersWithListInput: $@\n";
-}
+$api = new Swagger\Client\UserApi();
+$body = array(\Swagger\Client\Model\User[]->new()); # [\Swagger\Client\Model\User[]] List of user object
+
+try { 
+    $api->createUsersWithListInput($body);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->createUsersWithListInput: ', $e->getMessage(), "\n";
+} 
+?>
 ```
 
 ### Parameters
@@ -153,21 +162,24 @@ Delete user
 This can only be done by the logged in user.
 
 ### Example 
-```perl
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
 
 # Configure HTTP basic authorization: test_http_basic
 Swagger\Client::getDefaultConfiguration->setUusername('YOUR_USERNAME');
 Swagger\Client::getDefaultConfiguration->setPassword('YOUR_PASSWORD');
 
-my $api = new Swagger\Client\UserApi();
-my $username = username_example; # [string] The name that needs to be deleted
+$api = new Swagger\Client\UserApi();
+$username = username_example; # [string] The name that needs to be deleted
 
-eval { 
-    $api->deleteUser(username => $username);
-};
-if ($@) {
-    warn "Exception when calling UserApi->deleteUser: $@\n";
-}
+try { 
+    $api->deleteUser($username);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->deleteUser: ', $e->getMessage(), "\n";
+} 
+?>
 ```
 
 ### Parameters
@@ -199,18 +211,21 @@ Get user by user name
 
 
 ### Example 
-```perl
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
 
-my $api = new Swagger\Client\UserApi();
-my $username = username_example; # [string] The name that needs to be fetched. Use user1 for testing.
 
-eval { 
-    my $result = $api->getUserByName(username => $username);
+$api = new Swagger\Client\UserApi();
+$username = username_example; # [string] The name that needs to be fetched. Use user1 for testing.
+
+try { 
+    $result = $api->getUserByName($username);
     print_r($result);
-};
-if ($@) {
-    warn "Exception when calling UserApi->getUserByName: $@\n";
-}
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->getUserByName: ', $e->getMessage(), "\n";
+} 
+?>
 ```
 
 ### Parameters
@@ -242,19 +257,22 @@ Logs user into the system
 
 
 ### Example 
-```perl
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
 
-my $api = new Swagger\Client\UserApi();
-my $username = username_example; # [string] The user name for login
-my $password = password_example; # [string] The password for login in clear text
 
-eval { 
-    my $result = $api->loginUser(username => $username, password => $password);
+$api = new Swagger\Client\UserApi();
+$username = username_example; # [string] The user name for login
+$password = password_example; # [string] The password for login in clear text
+
+try { 
+    $result = $api->loginUser($username, $password);
     print_r($result);
-};
-if ($@) {
-    warn "Exception when calling UserApi->loginUser: $@\n";
-}
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->loginUser: ', $e->getMessage(), "\n";
+} 
+?>
 ```
 
 ### Parameters
@@ -287,16 +305,19 @@ Logs out current logged in user session
 
 
 ### Example 
-```perl
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
 
-my $api = new Swagger\Client\UserApi();
 
-eval { 
+$api = new Swagger\Client\UserApi();
+
+try { 
     $api->logoutUser();
-};
-if ($@) {
-    warn "Exception when calling UserApi->logoutUser: $@\n";
-}
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->logoutUser: ', $e->getMessage(), "\n";
+} 
+?>
 ```
 
 ### Parameters
@@ -325,18 +346,21 @@ Updated user
 This can only be done by the logged in user.
 
 ### Example 
-```perl
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
 
-my $api = new Swagger\Client\UserApi();
-my $username = username_example; # [string] name that need to be deleted
-my $body = Swagger\Client::Object::\Swagger\Client\Model\User->new(); # [\Swagger\Client\Model\User] Updated user object
 
-eval { 
-    $api->updateUser(username => $username, body => $body);
-};
-if ($@) {
-    warn "Exception when calling UserApi->updateUser: $@\n";
-}
+$api = new Swagger\Client\UserApi();
+$username = username_example; # [string] name that need to be deleted
+$body = \Swagger\Client\Model\User->new(); # [\Swagger\Client\Model\User] Updated user object
+
+try { 
+    $api->updateUser($username, $body);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->updateUser: ', $e->getMessage(), "\n";
+} 
+?>
 ```
 
 ### Parameters

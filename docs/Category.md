@@ -1,8 +1,8 @@
-# ::Object::Category
+# Swagger\Client::Object::Category
 
 ## Load the model package
 ```perl
-use ::Object::Category;
+use Swagger\Client::Object::Category;
 ```
 
 ## Properties

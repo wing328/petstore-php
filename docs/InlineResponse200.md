@@ -1,8 +1,8 @@
-# ::Object::InlineResponse200
+# Swagger\Client::Object::InlineResponse200
 
 ## Load the model package
 ```perl
-use ::Object::InlineResponse200;
+use Swagger\Client::Object::InlineResponse200;
 ```
 
 ## Properties

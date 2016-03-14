@@ -1,8 +1,8 @@
-# ::Object::Order
+# Swagger\Client::Object::Order
 
 ## Load the model package
 ```perl
-use ::Object::Order;
+use Swagger\Client::Object::Order;
 ```
 
 ## Properties

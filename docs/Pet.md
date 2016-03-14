@@ -1,8 +1,8 @@
-# ::Object::Pet
+# Swagger\Client::Object::Pet
 
 ## Load the model package
 ```perl
-use ::Object::Pet;
+use Swagger\Client::Object::Pet;
 ```
 
 ## Properties
