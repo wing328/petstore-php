@@ -55,14 +55,14 @@ class ObjectSerializer
     public static function sanitizeForSerialization($data)
     {
         if (is_scalar($data) || null === $data) {
-            $sanitized = $data;
+            return $data;
         } elseif ($data instanceof \DateTime) {
             $sanitized = $data->format(\DateTime::ATOM);
         } elseif (is_array($data)) {
             foreach ($data as $property => $value) {
                 $data[$property] = self::sanitizeForSerialization($value);
             }
-            $sanitized = $data;
+            return $data;
         } elseif (is_object($data)) {
             $values = array();
             foreach (array_keys($data::swaggerTypes()) as $property) {
@@ -71,12 +71,10 @@ class ObjectSerializer
                     $values[$data::attributeMap()[$property]] = self::sanitizeForSerialization($data->$getter());
                 }
             }
-            $sanitized = (object)$values;
+            return (object)$values;
         } else {
-            $sanitized = (string)$data;
+            return (string)$data;
         }
-
-        return $sanitized;
     }
 
     /**
