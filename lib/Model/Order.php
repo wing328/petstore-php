@@ -47,9 +47,9 @@ use \ArrayAccess;
 class Order implements ArrayAccess
 {
     /**
-      * Array of property to type mappings. Used for (de)serialization 
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization 
+     * @var string[]
+     */
     static $swaggerTypes = array(
         'id' => 'int',
         'pet_id' => 'int',
@@ -58,15 +58,15 @@ class Order implements ArrayAccess
         'status' => 'string',
         'complete' => 'bool'
     );
-  
+ 
     static function swaggerTypes() {
         return self::$swaggerTypes;
     }
 
     /** 
-      * Array of attributes where the key is the local name, and the value is the original name
-      * @var string[] 
-      */
+     * Array of attributes where the key is the local name, and the value is the original name
+     * @var string[]
+     */
     static $attributeMap = array(
         'id' => 'id',
         'pet_id' => 'petId',
@@ -75,15 +75,15 @@ class Order implements ArrayAccess
         'status' => 'status',
         'complete' => 'complete'
     );
-  
+ 
     static function attributeMap() {
         return self::$attributeMap;
     }
 
     /**
-      * Array of attributes to setter functions (for deserialization of responses)
-      * @var string[]
-      */
+     * Array of attributes to setter functions (for deserialization of responses)
+     * @var string[]
+     */
     static $setters = array(
         'id' => 'setId',
         'pet_id' => 'setPetId',
@@ -92,15 +92,15 @@ class Order implements ArrayAccess
         'status' => 'setStatus',
         'complete' => 'setComplete'
     );
-  
+ 
     static function setters() {
         return self::$setters;
     }
 
     /**
-      * Array of attributes to getter functions (for serialization of requests)
-      * @var string[]
-      */
+     * Array of attributes to getter functions (for serialization of requests)
+     * @var string[]
+     */
     static $getters = array(
         'id' => 'getId',
         'pet_id' => 'getPetId',
@@ -109,46 +109,65 @@ class Order implements ArrayAccess
         'status' => 'getStatus',
         'complete' => 'getComplete'
     );
-  
+ 
     static function getters() {
         return self::$getters;
     }
 
+    const Status_PLACED = "placed";
+    const Status_APPROVED = "approved";
+    const Status_DELIVERED = "delivered";
+    
+
     
     /**
-      * $id 
-      * @var int
-      */
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getStatusAllowableValues() {
+        return [
+            self::Status_PLACED,
+            self::Status_APPROVED,
+            self::Status_DELIVERED,
+        ];
+    }
+    
+
+    
+    /**
+     * $id 
+     * @var int
+     */
     protected $id;
     
     /**
-      * $pet_id 
-      * @var int
-      */
+     * $pet_id 
+     * @var int
+     */
     protected $pet_id;
     
     /**
-      * $quantity 
-      * @var int
-      */
+     * $quantity 
+     * @var int
+     */
     protected $quantity;
     
     /**
-      * $ship_date 
-      * @var \DateTime
-      */
+     * $ship_date 
+     * @var \DateTime
+     */
     protected $ship_date;
     
     /**
-      * $status Order Status
-      * @var string
-      */
+     * $status Order Status
+     * @var string
+     */
     protected $status;
     
     /**
-      * $complete 
-      * @var bool
-      */
+     * $complete 
+     * @var bool
+     */
     protected $complete;
     
 
@@ -170,16 +189,16 @@ class Order implements ArrayAccess
     }
     
     /**
-     * Gets id
+     * Gets id.
      * @return int
      */
     public function getId()
     {
         return $this->id;
     }
-  
+
     /**
-     * Sets id
+     * Sets id.
      * @param int $id 
      * @return $this
      */
@@ -191,16 +210,16 @@ class Order implements ArrayAccess
     }
     
     /**
-     * Gets pet_id
+     * Gets pet_id.
      * @return int
      */
     public function getPetId()
     {
         return $this->pet_id;
     }
-  
+
     /**
-     * Sets pet_id
+     * Sets pet_id.
      * @param int $pet_id 
      * @return $this
      */
@@ -212,16 +231,16 @@ class Order implements ArrayAccess
     }
     
     /**
-     * Gets quantity
+     * Gets quantity.
      * @return int
      */
     public function getQuantity()
     {
         return $this->quantity;
     }
-  
+
     /**
-     * Sets quantity
+     * Sets quantity.
      * @param int $quantity 
      * @return $this
      */
@@ -233,16 +252,16 @@ class Order implements ArrayAccess
     }
     
     /**
-     * Gets ship_date
+     * Gets ship_date.
      * @return \DateTime
      */
     public function getShipDate()
     {
         return $this->ship_date;
     }
-  
+
     /**
-     * Sets ship_date
+     * Sets ship_date.
      * @param \DateTime $ship_date 
      * @return $this
      */
@@ -254,16 +273,16 @@ class Order implements ArrayAccess
     }
     
     /**
-     * Gets status
+     * Gets status.
      * @return string
      */
     public function getStatus()
     {
         return $this->status;
     }
-  
+
     /**
-     * Sets status
+     * Sets status.
      * @param string $status Order Status
      * @return $this
      */
@@ -278,16 +297,16 @@ class Order implements ArrayAccess
     }
     
     /**
-     * Gets complete
+     * Gets complete.
      * @return bool
      */
     public function getComplete()
     {
         return $this->complete;
     }
-  
+
     /**
-     * Sets complete
+     * Sets complete.
      * @param bool $complete 
      * @return $this
      */
@@ -307,7 +326,7 @@ class Order implements ArrayAccess
     {
         return isset($this->$offset);
     }
-  
+
     /**
      * Gets offset.
      * @param  integer $offset Offset 
@@ -317,7 +336,7 @@ class Order implements ArrayAccess
     {
         return $this->$offset;
     }
-  
+ 
     /**
      * Sets value based on offset.
      * @param  integer $offset Offset 
@@ -328,7 +347,7 @@ class Order implements ArrayAccess
     {
         $this->$offset = $value;
     }
-  
+ 
     /**
      * Unsets offset.
      * @param  integer $offset Offset 
@@ -338,17 +357,19 @@ class Order implements ArrayAccess
     {
         unset($this->$offset);
     }
-  
+ 
     /**
-     * Gets the string presentation of the object
+     * Gets the string presentation of the object.
      * @return string
      */
     public function __toString()
     {
-        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
+        if (defined('JSON_PRETTY_PRINT')) {
             return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+        } else {
+            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
         }
-
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
+
+?>

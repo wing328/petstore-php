@@ -60,7 +60,7 @@ class StoreApi
      * Constructor
      * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
      */
-    function __construct($apiClient = null)
+    function __construct(\Swagger\Client\ApiClient $apiClient = null)
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
@@ -84,7 +84,7 @@ class StoreApi
      * @param \Swagger\Client\ApiClient $apiClient set the API client
      * @return StoreApi
      */
-    public function setApiClient(ApiClient $apiClient)
+    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -102,7 +102,7 @@ class StoreApi
      */
     public function deleteOrder($order_id)
     {
-        list($response) = $this->deleteOrderWithHttpInfo ($order_id);
+        list($response, $statusCode, $httpHeader) = $this->deleteOrderWithHttpInfo ($order_id);
         return $response; 
     }
 
@@ -130,11 +130,11 @@ class StoreApi
         $queryParams = array();
         $headerParams = array();
         $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml'));
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json', 'application/xml'));
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array());
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array());
   
         
         
@@ -189,7 +189,7 @@ class StoreApi
      */
     public function findOrdersByStatus($status = null)
     {
-        list($response) = $this->findOrdersByStatusWithHttpInfo ($status);
+        list($response, $statusCode, $httpHeader) = $this->findOrdersByStatusWithHttpInfo ($status);
         return $response; 
     }
 
@@ -213,11 +213,11 @@ class StoreApi
         $queryParams = array();
         $headerParams = array();
         $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml'));
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json', 'application/xml'));
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array());
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array());
   
         // query params
         
@@ -265,12 +265,12 @@ class StoreApi
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Order[]', $httpHeader), $statusCode, $httpHeader);
+            return array(\Swagger\Client\ObjectSerializer::deserialize($response, '\Swagger\Client\Model\Order[]', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Order[]', $e->getResponseHeaders());
+                $data = \Swagger\Client\ObjectSerializer::deserialize($e->getResponseBody(), '\Swagger\Client\Model\Order[]', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -289,7 +289,7 @@ class StoreApi
      */
     public function getInventory()
     {
-        list($response) = $this->getInventoryWithHttpInfo ();
+        list($response, $statusCode, $httpHeader) = $this->getInventoryWithHttpInfo ();
         return $response; 
     }
 
@@ -312,11 +312,11 @@ class StoreApi
         $queryParams = array();
         $headerParams = array();
         $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml'));
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json', 'application/xml'));
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array());
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array());
   
         
         
@@ -353,12 +353,12 @@ class StoreApi
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'map[string,int]', $httpHeader), $statusCode, $httpHeader);
+            return array(\Swagger\Client\ObjectSerializer::deserialize($response, 'map[string,int]', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'map[string,int]', $e->getResponseHeaders());
+                $data = \Swagger\Client\ObjectSerializer::deserialize($e->getResponseBody(), 'map[string,int]', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -377,7 +377,7 @@ class StoreApi
      */
     public function getInventoryInObject()
     {
-        list($response) = $this->getInventoryInObjectWithHttpInfo ();
+        list($response, $statusCode, $httpHeader) = $this->getInventoryInObjectWithHttpInfo ();
         return $response; 
     }
 
@@ -400,11 +400,11 @@ class StoreApi
         $queryParams = array();
         $headerParams = array();
         $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml'));
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json', 'application/xml'));
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array());
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array());
   
         
         
@@ -441,12 +441,12 @@ class StoreApi
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            return array(\Swagger\Client\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $data = \Swagger\Client\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -466,7 +466,7 @@ class StoreApi
      */
     public function getOrderById($order_id)
     {
-        list($response) = $this->getOrderByIdWithHttpInfo ($order_id);
+        list($response, $statusCode, $httpHeader) = $this->getOrderByIdWithHttpInfo ($order_id);
         return $response; 
     }
 
@@ -494,11 +494,11 @@ class StoreApi
         $queryParams = array();
         $headerParams = array();
         $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml'));
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json', 'application/xml'));
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array());
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array());
   
         
         
@@ -550,12 +550,12 @@ class StoreApi
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Order', $httpHeader), $statusCode, $httpHeader);
+            return array(\Swagger\Client\ObjectSerializer::deserialize($response, '\Swagger\Client\Model\Order', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Order', $e->getResponseHeaders());
+                $data = \Swagger\Client\ObjectSerializer::deserialize($e->getResponseBody(), '\Swagger\Client\Model\Order', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -575,7 +575,7 @@ class StoreApi
      */
     public function placeOrder($body = null)
     {
-        list($response) = $this->placeOrderWithHttpInfo ($body);
+        list($response, $statusCode, $httpHeader) = $this->placeOrderWithHttpInfo ($body);
         return $response; 
     }
 
@@ -599,11 +599,11 @@ class StoreApi
         $queryParams = array();
         $headerParams = array();
         $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml'));
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json', 'application/xml'));
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array());
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array());
   
         
         
@@ -651,12 +651,12 @@ class StoreApi
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Order', $httpHeader), $statusCode, $httpHeader);
+            return array(\Swagger\Client\ObjectSerializer::deserialize($response, '\Swagger\Client\Model\Order', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Order', $e->getResponseHeaders());
+                $data = \Swagger\Client\ObjectSerializer::deserialize($e->getResponseBody(), '\Swagger\Client\Model\Order', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
