@@ -34,10 +34,7 @@
 namespace Swagger\Client\Model;
 
 use \ArrayAccess;
-<<<<<<< HEAD
 
-=======
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
 /**
  * Tag Class Doc Comment
  *
@@ -57,88 +54,52 @@ class Tag implements ArrayAccess
     static $swaggerModelName = 'Tag';
 
     /**
-<<<<<<< HEAD
       * Array of property to type mappings. Used for (de)serialization
-=======
-      * Array of property to type mappings. Used for (de)serialization 
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
       * @var string[]
       */
     static $swaggerTypes = array(
         'id' => 'int',
         'name' => 'string'
     );
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function swaggerTypes() {
         return self::$swaggerTypes;
     }
 
-<<<<<<< HEAD
     /**
      * Array of attributes where the key is the local name, and the value is the original name
      * @var string[]
      */
-=======
-    /** 
-      * Array of attributes where the key is the local name, and the value is the original name
-      * @var string[] 
-      */
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $attributeMap = array(
         'id' => 'id',
         'name' => 'name'
     );
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function attributeMap() {
         return self::$attributeMap;
     }
 
     /**
-<<<<<<< HEAD
      * Array of attributes to setter functions (for deserialization of responses)
      * @var string[]
      */
-=======
-      * Array of attributes to setter functions (for deserialization of responses)
-      * @var string[]
-      */
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $setters = array(
         'id' => 'setId',
         'name' => 'setName'
     );
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function setters() {
         return self::$setters;
     }
 
     /**
-<<<<<<< HEAD
      * Array of attributes to getter functions (for serialization of requests)
      * @var string[]
      */
-=======
-      * Array of attributes to getter functions (for serialization of requests)
-      * @var string[]
-      */
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $getters = array(
         'id' => 'getId',
         'name' => 'getName'
     );
-<<<<<<< HEAD
 
     static function getters()
     {
@@ -154,23 +115,6 @@ class Tag implements ArrayAccess
      * @var mixed[]
      */
     protected $container = array();
-=======
-  
-    static function getters() {
-        return self::$getters;
-    }
-
-    /**
-      * $id 
-      * @var int
-      */
-    protected $id;
-    /**
-      * $name 
-      * @var string
-      */
-    protected $name;
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
 
     /**
      * Constructor
@@ -178,7 +122,6 @@ class Tag implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-<<<<<<< HEAD
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
@@ -206,30 +149,15 @@ class Tag implements ArrayAccess
     }
 
 
-=======
-        
-        
-        if ($data != null) {
-            $this->id = $data["id"];
-            $this->name = $data["name"];
-        }
-    }
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets id
      * @return int
      */
     public function getId()
     {
-<<<<<<< HEAD
         return $this->container['id'];
     }
 
-=======
-        return $this->id;
-    }
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets id
      * @param int $id 
@@ -237,33 +165,20 @@ class Tag implements ArrayAccess
      */
     public function setId($id)
     {
-<<<<<<< HEAD
         $this->container['id'] = $id;
 
         return $this;
     }
 
-=======
-        
-        $this->id = $id;
-        return $this;
-    }
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets name
      * @return string
      */
     public function getName()
     {
-<<<<<<< HEAD
         return $this->container['name'];
     }
 
-=======
-        return $this->name;
-    }
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets name
      * @param string $name 
@@ -271,27 +186,17 @@ class Tag implements ArrayAccess
      */
     public function setName($name)
     {
-<<<<<<< HEAD
         $this->container['name'] = $name;
 
-=======
-        
-        $this->name = $name;
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
         return $this;
     }
     /**
      * Returns true if offset exists. False otherwise.
-<<<<<<< HEAD
      * @param  integer $offset Offset
-=======
-     * @param  integer $offset Offset 
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return boolean
      */
     public function offsetExists($offset)
     {
-<<<<<<< HEAD
         return isset($this->container[$offset]);
     }
 
@@ -308,30 +213,11 @@ class Tag implements ArrayAccess
     /**
      * Sets value based on offset.
      * @param  integer $offset Offset
-=======
-        return isset($this->$offset);
-    }
-  
-    /**
-     * Gets offset.
-     * @param  integer $offset Offset 
-     * @return mixed 
-     */
-    public function offsetGet($offset)
-    {
-        return $this->$offset;
-    }
-  
-    /**
-     * Sets value based on offset.
-     * @param  integer $offset Offset 
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @param  mixed   $value  Value to be set
      * @return void
      */
     public function offsetSet($offset, $value)
     {
-<<<<<<< HEAD
         if (is_null($offset)) {
             $this->container[] = $value;
         } else {
@@ -342,27 +228,13 @@ class Tag implements ArrayAccess
     /**
      * Unsets offset.
      * @param  integer $offset Offset
-=======
-        $this->$offset = $value;
-    }
-  
-    /**
-     * Unsets offset.
-     * @param  integer $offset Offset 
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return void
      */
     public function offsetUnset($offset)
     {
-<<<<<<< HEAD
         unset($this->container[$offset]);
     }
 
-=======
-        unset($this->$offset);
-    }
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets the string presentation of the object
      * @return string

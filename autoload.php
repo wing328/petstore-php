@@ -1,7 +1,6 @@
 <?php
 /**
  * An example of a project-specific implementation.
-<<<<<<< HEAD
  *
  * After registering this autoload function with SPL, the following line
  * would cause the function to attempt to load the \Swagger\Client\Baz\Qux class
@@ -11,16 +10,6 @@
  *
  * @param string $class The fully-qualified class name.
  *
-=======
- * 
- * After registering this autoload function with SPL, the following line
- * would cause the function to attempt to load the \Swagger\Client\Baz\Qux class
- * from /path/to/project/lib/Baz/Qux.php:
- * 
- *      new \Swagger\Client\Baz\Qux;
- *      
- * @param string $class The fully-qualified class name.
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
  * @return void
  */
 spl_autoload_register(function ($class) {

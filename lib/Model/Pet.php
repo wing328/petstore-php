@@ -34,10 +34,7 @@
 namespace Swagger\Client\Model;
 
 use \ArrayAccess;
-<<<<<<< HEAD
 
-=======
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
 /**
  * Pet Class Doc Comment
  *
@@ -57,11 +54,7 @@ class Pet implements ArrayAccess
     static $swaggerModelName = 'Pet';
 
     /**
-<<<<<<< HEAD
       * Array of property to type mappings. Used for (de)serialization
-=======
-      * Array of property to type mappings. Used for (de)serialization 
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
       * @var string[]
       */
     static $swaggerTypes = array(
@@ -72,26 +65,15 @@ class Pet implements ArrayAccess
         'tags' => '\Swagger\Client\Model\Tag[]',
         'status' => 'string'
     );
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function swaggerTypes() {
         return self::$swaggerTypes;
     }
 
-<<<<<<< HEAD
     /**
      * Array of attributes where the key is the local name, and the value is the original name
      * @var string[]
      */
-=======
-    /** 
-      * Array of attributes where the key is the local name, and the value is the original name
-      * @var string[] 
-      */
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $attributeMap = array(
         'id' => 'id',
         'category' => 'category',
@@ -100,25 +82,15 @@ class Pet implements ArrayAccess
         'tags' => 'tags',
         'status' => 'status'
     );
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function attributeMap() {
         return self::$attributeMap;
     }
 
     /**
-<<<<<<< HEAD
      * Array of attributes to setter functions (for deserialization of responses)
      * @var string[]
      */
-=======
-      * Array of attributes to setter functions (for deserialization of responses)
-      * @var string[]
-      */
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $setters = array(
         'id' => 'setId',
         'category' => 'setCategory',
@@ -127,25 +99,15 @@ class Pet implements ArrayAccess
         'tags' => 'setTags',
         'status' => 'setStatus'
     );
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function setters() {
         return self::$setters;
     }
 
     /**
-<<<<<<< HEAD
      * Array of attributes to getter functions (for serialization of requests)
      * @var string[]
      */
-=======
-      * Array of attributes to getter functions (for serialization of requests)
-      * @var string[]
-      */
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $getters = array(
         'id' => 'getId',
         'category' => 'getCategory',
@@ -154,7 +116,6 @@ class Pet implements ArrayAccess
         'tags' => 'getTags',
         'status' => 'getStatus'
     );
-<<<<<<< HEAD
 
     static function getters()
     {
@@ -186,43 +147,6 @@ class Pet implements ArrayAccess
      * @var mixed[]
      */
     protected $container = array();
-=======
-  
-    static function getters() {
-        return self::$getters;
-    }
-
-    /**
-      * $id 
-      * @var int
-      */
-    protected $id;
-    /**
-      * $category 
-      * @var \Swagger\Client\Model\Category
-      */
-    protected $category;
-    /**
-      * $name 
-      * @var string
-      */
-    protected $name;
-    /**
-      * $photo_urls 
-      * @var string[]
-      */
-    protected $photo_urls;
-    /**
-      * $tags 
-      * @var \Swagger\Client\Model\Tag[]
-      */
-    protected $tags;
-    /**
-      * $status pet status in the store
-      * @var string
-      */
-    protected $status;
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
 
     /**
      * Constructor
@@ -230,7 +154,6 @@ class Pet implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-<<<<<<< HEAD
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -282,34 +205,15 @@ class Pet implements ArrayAccess
     }
 
 
-=======
-        
-        
-        if ($data != null) {
-            $this->id = $data["id"];
-            $this->category = $data["category"];
-            $this->name = $data["name"];
-            $this->photo_urls = $data["photo_urls"];
-            $this->tags = $data["tags"];
-            $this->status = $data["status"];
-        }
-    }
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets id
      * @return int
      */
     public function getId()
     {
-<<<<<<< HEAD
         return $this->container['id'];
     }
 
-=======
-        return $this->id;
-    }
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets id
      * @param int $id 
@@ -317,33 +221,20 @@ class Pet implements ArrayAccess
      */
     public function setId($id)
     {
-<<<<<<< HEAD
         $this->container['id'] = $id;
 
         return $this;
     }
 
-=======
-        
-        $this->id = $id;
-        return $this;
-    }
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets category
      * @return \Swagger\Client\Model\Category
      */
     public function getCategory()
     {
-<<<<<<< HEAD
         return $this->container['category'];
     }
 
-=======
-        return $this->category;
-    }
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets category
      * @param \Swagger\Client\Model\Category $category 
@@ -351,33 +242,20 @@ class Pet implements ArrayAccess
      */
     public function setCategory($category)
     {
-<<<<<<< HEAD
         $this->container['category'] = $category;
 
         return $this;
     }
 
-=======
-        
-        $this->category = $category;
-        return $this;
-    }
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets name
      * @return string
      */
     public function getName()
     {
-<<<<<<< HEAD
         return $this->container['name'];
     }
 
-=======
-        return $this->name;
-    }
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets name
      * @param string $name 
@@ -385,33 +263,20 @@ class Pet implements ArrayAccess
      */
     public function setName($name)
     {
-<<<<<<< HEAD
         $this->container['name'] = $name;
 
         return $this;
     }
 
-=======
-        
-        $this->name = $name;
-        return $this;
-    }
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets photo_urls
      * @return string[]
      */
     public function getPhotoUrls()
     {
-<<<<<<< HEAD
         return $this->container['photo_urls'];
     }
 
-=======
-        return $this->photo_urls;
-    }
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets photo_urls
      * @param string[] $photo_urls 
@@ -419,33 +284,20 @@ class Pet implements ArrayAccess
      */
     public function setPhotoUrls($photo_urls)
     {
-<<<<<<< HEAD
         $this->container['photo_urls'] = $photo_urls;
 
         return $this;
     }
 
-=======
-        
-        $this->photo_urls = $photo_urls;
-        return $this;
-    }
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets tags
      * @return \Swagger\Client\Model\Tag[]
      */
     public function getTags()
     {
-<<<<<<< HEAD
         return $this->container['tags'];
     }
 
-=======
-        return $this->tags;
-    }
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets tags
      * @param \Swagger\Client\Model\Tag[] $tags 
@@ -453,33 +305,20 @@ class Pet implements ArrayAccess
      */
     public function setTags($tags)
     {
-<<<<<<< HEAD
         $this->container['tags'] = $tags;
 
         return $this;
     }
 
-=======
-        
-        $this->tags = $tags;
-        return $this;
-    }
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets status
      * @return string
      */
     public function getStatus()
     {
-<<<<<<< HEAD
         return $this->container['status'];
     }
 
-=======
-        return $this->status;
-    }
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets status
      * @param string $status pet status in the store
@@ -487,34 +326,21 @@ class Pet implements ArrayAccess
      */
     public function setStatus($status)
     {
-<<<<<<< HEAD
         $allowed_values = array('available', 'pending', 'sold');
         if (!in_array($status, $allowed_values)) {
             throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'available', 'pending', 'sold'");
         }
         $this->container['status'] = $status;
 
-=======
-        $allowed_values = array("available", "pending", "sold");
-        if (!in_array($status, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'available', 'pending', 'sold'");
-        }
-        $this->status = $status;
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
         return $this;
     }
     /**
      * Returns true if offset exists. False otherwise.
-<<<<<<< HEAD
      * @param  integer $offset Offset
-=======
-     * @param  integer $offset Offset 
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return boolean
      */
     public function offsetExists($offset)
     {
-<<<<<<< HEAD
         return isset($this->container[$offset]);
     }
 
@@ -531,30 +357,11 @@ class Pet implements ArrayAccess
     /**
      * Sets value based on offset.
      * @param  integer $offset Offset
-=======
-        return isset($this->$offset);
-    }
-  
-    /**
-     * Gets offset.
-     * @param  integer $offset Offset 
-     * @return mixed 
-     */
-    public function offsetGet($offset)
-    {
-        return $this->$offset;
-    }
-  
-    /**
-     * Sets value based on offset.
-     * @param  integer $offset Offset 
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @param  mixed   $value  Value to be set
      * @return void
      */
     public function offsetSet($offset, $value)
     {
-<<<<<<< HEAD
         if (is_null($offset)) {
             $this->container[] = $value;
         } else {
@@ -565,27 +372,13 @@ class Pet implements ArrayAccess
     /**
      * Unsets offset.
      * @param  integer $offset Offset
-=======
-        $this->$offset = $value;
-    }
-  
-    /**
-     * Unsets offset.
-     * @param  integer $offset Offset 
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return void
      */
     public function offsetUnset($offset)
     {
-<<<<<<< HEAD
         unset($this->container[$offset]);
     }
 
-=======
-        unset($this->$offset);
-    }
-  
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets the string presentation of the object
      * @return string

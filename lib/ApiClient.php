@@ -55,36 +55,24 @@ class ApiClient
 
     /**
      * Configuration
-<<<<<<< HEAD
      *
-=======
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @var Configuration
      */
     protected $config;
 
     /**
      * Object Serializer
-<<<<<<< HEAD
      *
-=======
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @var ObjectSerializer
      */
     protected $serializer;
 
     /**
      * Constructor of the class
-<<<<<<< HEAD
      *
      * @param Configuration $config config for this ApiClient
      */
     public function __construct(\Swagger\Client\Configuration $config = null)
-=======
-     * @param Configuration $config config for this ApiClient
-     */
-    public function __construct(Configuration $config = null)
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     {
         if ($config == null) {
             $config = Configuration::getDefaultConfiguration();
@@ -96,10 +84,7 @@ class ApiClient
 
     /**
      * Get the config
-<<<<<<< HEAD
      *
-=======
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return Configuration
      */
     public function getConfig()
@@ -109,10 +94,7 @@ class ApiClient
 
     /**
      * Get the serializer
-<<<<<<< HEAD
      *
-=======
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return ObjectSerializer
      */
     public function getSerializer()
@@ -122,13 +104,9 @@ class ApiClient
 
     /**
      * Get API key (with prefix if set)
-<<<<<<< HEAD
      *
      * @param  string $apiKeyIdentifier name of apikey
      *
-=======
-     * @param  string $apiKeyIdentifier name of apikey
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return string API key with the prefix
      */
     public function getApiKeyWithPrefix($apiKeyIdentifier)
@@ -151,20 +129,14 @@ class ApiClient
 
     /**
      * Make the HTTP call (Sync)
-<<<<<<< HEAD
      *
-=======
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @param string $resourcePath path to method endpoint
      * @param string $method       method to call
      * @param array  $queryParams  parameters to be place in query URL
      * @param array  $postData     parameters to be placed in POST body
      * @param array  $headerParams parameters to be place in request header
      * @param string $responseType expected response type of the endpoint
-<<<<<<< HEAD
      *
-=======
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @throws \Swagger\Client\ApiException on a non 2xx response
      * @return mixed
      */
@@ -197,11 +169,7 @@ class ApiClient
         if ($this->config->getCurlTimeout() != 0) {
             curl_setopt($curl, CURLOPT_TIMEOUT, $this->config->getCurlTimeout());
         }
-<<<<<<< HEAD
         // return the result on success, rather than just true
-=======
-        // return the result on success, rather than just true 
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
         curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -212,11 +180,7 @@ class ApiClient
             curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
         }
 
-<<<<<<< HEAD
         if (!empty($queryParams)) {
-=======
-        if (! empty($queryParams)) {
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
             $url = ($url . '?' . http_build_query($queryParams));
         }
 
@@ -261,11 +225,7 @@ class ApiClient
         // Make the request
         $response = curl_exec($curl);
         $http_header_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
-<<<<<<< HEAD
         $http_header = $this->httpParseHeaders(substr($response, 0, $http_header_size));
-=======
-        $http_header = $this->http_parse_headers(substr($response, 0, $http_header_size));
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
         $http_body = substr($response, $http_header_size);
         $response_info = curl_getinfo($curl);
 
@@ -344,28 +304,16 @@ class ApiClient
     *
     * @return string[] Array of HTTP response heaers
     */
-<<<<<<< HEAD
     protected function httpParseHeaders($raw_headers)
-=======
-    protected function http_parse_headers($raw_headers)
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     {
         // ref/credit: http://php.net/manual/en/function.http-parse-headers.php#112986
         $headers = array();
         $key = '';
-<<<<<<< HEAD
 
         foreach(explode("\n", $raw_headers) as $h)
         {
             $h = explode(':', $h, 2);
 
-=======
-   
-        foreach(explode("\n", $raw_headers) as $h)
-        {
-            $h = explode(':', $h, 2);
-   
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
             if (isset($h[1]))
             {
                 if (!isset($headers[$h[0]]))
@@ -378,31 +326,18 @@ class ApiClient
                 {
                     $headers[$h[0]] = array_merge(array($headers[$h[0]]), array(trim($h[1])));
                 }
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
                 $key = $h[0];
             }
             else
             {
-<<<<<<< HEAD
                 if (substr($h[0], 0, 1) == "\t")
                     $headers[$key] .= "\r\n\t".trim($h[0]);
-=======
-                if (substr($h[0], 0, 1) == "\t") 
-                    $headers[$key] .= "\r\n\t".trim($h[0]); 
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
                 elseif (!$key)
                     $headers[0] = trim($h[0]);trim($h[0]);
             }
         }
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
         return $headers;
     }
 }

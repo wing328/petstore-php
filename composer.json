@@ -1,9 +1,5 @@
 {
     "name": "wing328/petstore-php",
-<<<<<<< HEAD
-=======
-    "version": "1.0.0",
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     "description": "",
     "keywords": [
         "swagger",
@@ -32,11 +28,8 @@
     },
     "autoload": {
         "psr-4": { "Swagger\\Client\\" : "lib/" }
-<<<<<<< HEAD
     },
     "autoload-dev": {
         "psr-4": { "Swagger\\Client\\" : "test/" }
-=======
->>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     }
 }
