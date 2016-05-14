@@ -1,6 +1,10 @@
 <?php
 /**
+<<<<<<< HEAD
  * ObjectSerializer
+=======
+ * ObjectSerializer 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
  *
  * PHP version 5
  *
@@ -37,7 +41,11 @@ namespace Swagger\Client;
  * ObjectSerializer Class Doc Comment
  *
  * @category Class
+<<<<<<< HEAD
  * @package  Swagger\Client
+=======
+ * @package  Swagger\Client 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -79,7 +87,11 @@ class ObjectSerializer
 
     /**
      * Sanitize filename by removing path.
+<<<<<<< HEAD
      * e.g. ../../sun.gif becomes sun.gif
+=======
+     * e.g. ../../sun.gif becomes sun.gif 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      *
      * @param string $filename filename to be sanitized
      *
@@ -270,7 +282,11 @@ class ObjectSerializer
             $byte_written = $deserialized->fwrite($data);
             error_log("[INFO] Written $byte_written byte to $filename. Please move the file to a proper folder or delete the temp file after processing.\n", 3, Configuration::getDefaultConfiguration()->getDebugFile());
             return $deserialized;
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
         } else {
             // If a discriminator is defined and points to a valid subclass, use it.
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
@@ -282,11 +298,19 @@ class ObjectSerializer
             $instance = new $class();
             foreach ($instance::swaggerTypes() as $property => $type) {
                 $propertySetter = $instance::setters()[$property];
+<<<<<<< HEAD
 
                 if (!isset($propertySetter) || !isset($data->{$instance::attributeMap()[$property]})) {
                     continue;
                 }
 
+=======
+     
+                if (!isset($propertySetter) || !isset($data->{$instance::attributeMap()[$property]})) {
+                    continue;
+                }
+     
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
                 $propertyValue = $data->{$instance::attributeMap()[$property]};
                 if (isset($propertyValue)) {
                     $instance->$propertySetter(self::deserialize($propertyValue, $type, null, $discriminator));

@@ -110,7 +110,11 @@ class Configuration
      *
      * @var string
      */
+<<<<<<< HEAD
     protected $userAgent = "Swagger-Codegen//php";
+=======
+    protected $userAgent = "Swagger-Codegen/1.0.0/php";
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
 
     /**
      * Debug switch (default set to false)
@@ -517,7 +521,11 @@ class Configuration
         $report .= "    OS: ".php_uname()."\n";
         $report .= "    PHP Version: ".phpversion()."\n";
         $report .= "    OpenAPI Spec Version: 1.0.0\n";
+<<<<<<< HEAD
         $report .= "    SDK Package Version: \n";
+=======
+        $report .= "    SDK Package Version: 1.0.0\n";
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
         $report .= "    Temp Folder Path: ".self::getDefaultConfiguration()->getTempFolderPath()."\n";
 
         return $report;

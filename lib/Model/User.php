@@ -34,7 +34,10 @@
 namespace Swagger\Client\Model;
 
 use \ArrayAccess;
+<<<<<<< HEAD
 
+=======
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
 /**
  * User Class Doc Comment
  *
@@ -54,7 +57,11 @@ class User implements ArrayAccess
     static $swaggerModelName = 'User';
 
     /**
+<<<<<<< HEAD
       * Array of property to type mappings. Used for (de)serialization
+=======
+      * Array of property to type mappings. Used for (de)serialization 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
       * @var string[]
       */
     static $swaggerTypes = array(
@@ -67,15 +74,26 @@ class User implements ArrayAccess
         'phone' => 'string',
         'user_status' => 'int'
     );
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function swaggerTypes() {
         return self::$swaggerTypes;
     }
 
+<<<<<<< HEAD
     /**
      * Array of attributes where the key is the local name, and the value is the original name
      * @var string[]
      */
+=======
+    /** 
+      * Array of attributes where the key is the local name, and the value is the original name
+      * @var string[] 
+      */
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $attributeMap = array(
         'id' => 'id',
         'username' => 'username',
@@ -86,15 +104,25 @@ class User implements ArrayAccess
         'phone' => 'phone',
         'user_status' => 'userStatus'
     );
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function attributeMap() {
         return self::$attributeMap;
     }
 
     /**
+<<<<<<< HEAD
      * Array of attributes to setter functions (for deserialization of responses)
      * @var string[]
      */
+=======
+      * Array of attributes to setter functions (for deserialization of responses)
+      * @var string[]
+      */
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $setters = array(
         'id' => 'setId',
         'username' => 'setUsername',
@@ -105,15 +133,25 @@ class User implements ArrayAccess
         'phone' => 'setPhone',
         'user_status' => 'setUserStatus'
     );
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function setters() {
         return self::$setters;
     }
 
     /**
+<<<<<<< HEAD
      * Array of attributes to getter functions (for serialization of requests)
      * @var string[]
      */
+=======
+      * Array of attributes to getter functions (for serialization of requests)
+      * @var string[]
+      */
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $getters = array(
         'id' => 'getId',
         'username' => 'getUsername',
@@ -124,6 +162,7 @@ class User implements ArrayAccess
         'phone' => 'getPhone',
         'user_status' => 'getUserStatus'
     );
+<<<<<<< HEAD
 
     static function getters()
     {
@@ -139,6 +178,53 @@ class User implements ArrayAccess
      * @var mixed[]
      */
     protected $container = array();
+=======
+  
+    static function getters() {
+        return self::$getters;
+    }
+
+    /**
+      * $id 
+      * @var int
+      */
+    protected $id;
+    /**
+      * $username 
+      * @var string
+      */
+    protected $username;
+    /**
+      * $first_name 
+      * @var string
+      */
+    protected $first_name;
+    /**
+      * $last_name 
+      * @var string
+      */
+    protected $last_name;
+    /**
+      * $email 
+      * @var string
+      */
+    protected $email;
+    /**
+      * $password 
+      * @var string
+      */
+    protected $password;
+    /**
+      * $phone 
+      * @var string
+      */
+    protected $phone;
+    /**
+      * $user_status User Status
+      * @var int
+      */
+    protected $user_status;
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
 
     /**
      * Constructor
@@ -146,6 +232,7 @@ class User implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+<<<<<<< HEAD
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
         $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
@@ -179,15 +266,36 @@ class User implements ArrayAccess
     }
 
 
+=======
+        
+        
+        if ($data != null) {
+            $this->id = $data["id"];
+            $this->username = $data["username"];
+            $this->first_name = $data["first_name"];
+            $this->last_name = $data["last_name"];
+            $this->email = $data["email"];
+            $this->password = $data["password"];
+            $this->phone = $data["phone"];
+            $this->user_status = $data["user_status"];
+        }
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets id
      * @return int
      */
     public function getId()
     {
+<<<<<<< HEAD
         return $this->container['id'];
     }
 
+=======
+        return $this->id;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets id
      * @param int $id 
@@ -195,20 +303,33 @@ class User implements ArrayAccess
      */
     public function setId($id)
     {
+<<<<<<< HEAD
         $this->container['id'] = $id;
 
         return $this;
     }
 
+=======
+        
+        $this->id = $id;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets username
      * @return string
      */
     public function getUsername()
     {
+<<<<<<< HEAD
         return $this->container['username'];
     }
 
+=======
+        return $this->username;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets username
      * @param string $username 
@@ -216,20 +337,33 @@ class User implements ArrayAccess
      */
     public function setUsername($username)
     {
+<<<<<<< HEAD
         $this->container['username'] = $username;
 
         return $this;
     }
 
+=======
+        
+        $this->username = $username;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets first_name
      * @return string
      */
     public function getFirstName()
     {
+<<<<<<< HEAD
         return $this->container['first_name'];
     }
 
+=======
+        return $this->first_name;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets first_name
      * @param string $first_name 
@@ -237,20 +371,33 @@ class User implements ArrayAccess
      */
     public function setFirstName($first_name)
     {
+<<<<<<< HEAD
         $this->container['first_name'] = $first_name;
 
         return $this;
     }
 
+=======
+        
+        $this->first_name = $first_name;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets last_name
      * @return string
      */
     public function getLastName()
     {
+<<<<<<< HEAD
         return $this->container['last_name'];
     }
 
+=======
+        return $this->last_name;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets last_name
      * @param string $last_name 
@@ -258,20 +405,33 @@ class User implements ArrayAccess
      */
     public function setLastName($last_name)
     {
+<<<<<<< HEAD
         $this->container['last_name'] = $last_name;
 
         return $this;
     }
 
+=======
+        
+        $this->last_name = $last_name;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets email
      * @return string
      */
     public function getEmail()
     {
+<<<<<<< HEAD
         return $this->container['email'];
     }
 
+=======
+        return $this->email;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets email
      * @param string $email 
@@ -279,20 +439,33 @@ class User implements ArrayAccess
      */
     public function setEmail($email)
     {
+<<<<<<< HEAD
         $this->container['email'] = $email;
 
         return $this;
     }
 
+=======
+        
+        $this->email = $email;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets password
      * @return string
      */
     public function getPassword()
     {
+<<<<<<< HEAD
         return $this->container['password'];
     }
 
+=======
+        return $this->password;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets password
      * @param string $password 
@@ -300,20 +473,33 @@ class User implements ArrayAccess
      */
     public function setPassword($password)
     {
+<<<<<<< HEAD
         $this->container['password'] = $password;
 
         return $this;
     }
 
+=======
+        
+        $this->password = $password;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets phone
      * @return string
      */
     public function getPhone()
     {
+<<<<<<< HEAD
         return $this->container['phone'];
     }
 
+=======
+        return $this->phone;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets phone
      * @param string $phone 
@@ -321,20 +507,33 @@ class User implements ArrayAccess
      */
     public function setPhone($phone)
     {
+<<<<<<< HEAD
         $this->container['phone'] = $phone;
 
         return $this;
     }
 
+=======
+        
+        $this->phone = $phone;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets user_status
      * @return int
      */
     public function getUserStatus()
     {
+<<<<<<< HEAD
         return $this->container['user_status'];
     }
 
+=======
+        return $this->user_status;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets user_status
      * @param int $user_status User Status
@@ -342,17 +541,27 @@ class User implements ArrayAccess
      */
     public function setUserStatus($user_status)
     {
+<<<<<<< HEAD
         $this->container['user_status'] = $user_status;
 
+=======
+        
+        $this->user_status = $user_status;
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
         return $this;
     }
     /**
      * Returns true if offset exists. False otherwise.
+<<<<<<< HEAD
      * @param  integer $offset Offset
+=======
+     * @param  integer $offset Offset 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return boolean
      */
     public function offsetExists($offset)
     {
+<<<<<<< HEAD
         return isset($this->container[$offset]);
     }
 
@@ -369,11 +578,30 @@ class User implements ArrayAccess
     /**
      * Sets value based on offset.
      * @param  integer $offset Offset
+=======
+        return isset($this->$offset);
+    }
+  
+    /**
+     * Gets offset.
+     * @param  integer $offset Offset 
+     * @return mixed 
+     */
+    public function offsetGet($offset)
+    {
+        return $this->$offset;
+    }
+  
+    /**
+     * Sets value based on offset.
+     * @param  integer $offset Offset 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @param  mixed   $value  Value to be set
      * @return void
      */
     public function offsetSet($offset, $value)
     {
+<<<<<<< HEAD
         if (is_null($offset)) {
             $this->container[] = $value;
         } else {
@@ -384,13 +612,27 @@ class User implements ArrayAccess
     /**
      * Unsets offset.
      * @param  integer $offset Offset
+=======
+        $this->$offset = $value;
+    }
+  
+    /**
+     * Unsets offset.
+     * @param  integer $offset Offset 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return void
      */
     public function offsetUnset($offset)
     {
+<<<<<<< HEAD
         unset($this->container[$offset]);
     }
 
+=======
+        unset($this->$offset);
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets the string presentation of the object
      * @return string

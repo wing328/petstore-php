@@ -48,28 +48,40 @@ class ApiException extends Exception
 
     /**
      * The HTTP body of the server response either as Json or string.
+<<<<<<< HEAD
      *
+=======
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @var mixed
      */
     protected $responseBody;
 
     /**
      * The HTTP header of the server response.
+<<<<<<< HEAD
      *
+=======
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @var string[]
      */
     protected $responseHeaders;
 
     /**
      * The deserialized response object
+<<<<<<< HEAD
      *
+=======
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @var $responseObject;
      */
     protected $responseObject;
 
     /**
      * Constructor
+<<<<<<< HEAD
      *
+=======
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @param string $message         Error message
      * @param int    $code            HTTP status code
      * @param string $responseHeaders HTTP response header
@@ -104,9 +116,13 @@ class ApiException extends Exception
 
     /**
      * Sets the deseralized response object (during deserialization)
+<<<<<<< HEAD
      *
      * @param mixed $obj Deserialized response object
      *
+=======
+     * @param mixed $obj Deserialized response object
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return void
      */
     public function setResponseObject($obj)

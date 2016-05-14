@@ -34,7 +34,10 @@
 namespace Swagger\Client\Model;
 
 use \ArrayAccess;
+<<<<<<< HEAD
 
+=======
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
 /**
  * Order Class Doc Comment
  *
@@ -54,7 +57,11 @@ class Order implements ArrayAccess
     static $swaggerModelName = 'Order';
 
     /**
+<<<<<<< HEAD
       * Array of property to type mappings. Used for (de)serialization
+=======
+      * Array of property to type mappings. Used for (de)serialization 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
       * @var string[]
       */
     static $swaggerTypes = array(
@@ -65,15 +72,26 @@ class Order implements ArrayAccess
         'status' => 'string',
         'complete' => 'bool'
     );
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function swaggerTypes() {
         return self::$swaggerTypes;
     }
 
+<<<<<<< HEAD
     /**
      * Array of attributes where the key is the local name, and the value is the original name
      * @var string[]
      */
+=======
+    /** 
+      * Array of attributes where the key is the local name, and the value is the original name
+      * @var string[] 
+      */
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $attributeMap = array(
         'id' => 'id',
         'pet_id' => 'petId',
@@ -82,15 +100,25 @@ class Order implements ArrayAccess
         'status' => 'status',
         'complete' => 'complete'
     );
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function attributeMap() {
         return self::$attributeMap;
     }
 
     /**
+<<<<<<< HEAD
      * Array of attributes to setter functions (for deserialization of responses)
      * @var string[]
      */
+=======
+      * Array of attributes to setter functions (for deserialization of responses)
+      * @var string[]
+      */
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $setters = array(
         'id' => 'setId',
         'pet_id' => 'setPetId',
@@ -99,15 +127,25 @@ class Order implements ArrayAccess
         'status' => 'setStatus',
         'complete' => 'setComplete'
     );
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static function setters() {
         return self::$setters;
     }
 
     /**
+<<<<<<< HEAD
      * Array of attributes to getter functions (for serialization of requests)
      * @var string[]
      */
+=======
+      * Array of attributes to getter functions (for serialization of requests)
+      * @var string[]
+      */
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     static $getters = array(
         'id' => 'getId',
         'pet_id' => 'getPetId',
@@ -116,6 +154,7 @@ class Order implements ArrayAccess
         'status' => 'getStatus',
         'complete' => 'getComplete'
     );
+<<<<<<< HEAD
 
     static function getters()
     {
@@ -147,6 +186,43 @@ class Order implements ArrayAccess
      * @var mixed[]
      */
     protected $container = array();
+=======
+  
+    static function getters() {
+        return self::$getters;
+    }
+
+    /**
+      * $id 
+      * @var int
+      */
+    protected $id;
+    /**
+      * $pet_id 
+      * @var int
+      */
+    protected $pet_id;
+    /**
+      * $quantity 
+      * @var int
+      */
+    protected $quantity;
+    /**
+      * $ship_date 
+      * @var \DateTime
+      */
+    protected $ship_date;
+    /**
+      * $status Order Status
+      * @var string
+      */
+    protected $status;
+    /**
+      * $complete 
+      * @var bool
+      */
+    protected $complete;
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
 
     /**
      * Constructor
@@ -154,6 +230,7 @@ class Order implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+<<<<<<< HEAD
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['pet_id'] = isset($data['pet_id']) ? $data['pet_id'] : null;
         $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
@@ -193,15 +270,34 @@ class Order implements ArrayAccess
     }
 
 
+=======
+        
+        
+        if ($data != null) {
+            $this->id = $data["id"];
+            $this->pet_id = $data["pet_id"];
+            $this->quantity = $data["quantity"];
+            $this->ship_date = $data["ship_date"];
+            $this->status = $data["status"];
+            $this->complete = $data["complete"];
+        }
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets id
      * @return int
      */
     public function getId()
     {
+<<<<<<< HEAD
         return $this->container['id'];
     }
 
+=======
+        return $this->id;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets id
      * @param int $id 
@@ -209,20 +305,33 @@ class Order implements ArrayAccess
      */
     public function setId($id)
     {
+<<<<<<< HEAD
         $this->container['id'] = $id;
 
         return $this;
     }
 
+=======
+        
+        $this->id = $id;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets pet_id
      * @return int
      */
     public function getPetId()
     {
+<<<<<<< HEAD
         return $this->container['pet_id'];
     }
 
+=======
+        return $this->pet_id;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets pet_id
      * @param int $pet_id 
@@ -230,20 +339,33 @@ class Order implements ArrayAccess
      */
     public function setPetId($pet_id)
     {
+<<<<<<< HEAD
         $this->container['pet_id'] = $pet_id;
 
         return $this;
     }
 
+=======
+        
+        $this->pet_id = $pet_id;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets quantity
      * @return int
      */
     public function getQuantity()
     {
+<<<<<<< HEAD
         return $this->container['quantity'];
     }
 
+=======
+        return $this->quantity;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets quantity
      * @param int $quantity 
@@ -251,20 +373,33 @@ class Order implements ArrayAccess
      */
     public function setQuantity($quantity)
     {
+<<<<<<< HEAD
         $this->container['quantity'] = $quantity;
 
         return $this;
     }
 
+=======
+        
+        $this->quantity = $quantity;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets ship_date
      * @return \DateTime
      */
     public function getShipDate()
     {
+<<<<<<< HEAD
         return $this->container['ship_date'];
     }
 
+=======
+        return $this->ship_date;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets ship_date
      * @param \DateTime $ship_date 
@@ -272,20 +407,33 @@ class Order implements ArrayAccess
      */
     public function setShipDate($ship_date)
     {
+<<<<<<< HEAD
         $this->container['ship_date'] = $ship_date;
 
         return $this;
     }
 
+=======
+        
+        $this->ship_date = $ship_date;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets status
      * @return string
      */
     public function getStatus()
     {
+<<<<<<< HEAD
         return $this->container['status'];
     }
 
+=======
+        return $this->status;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets status
      * @param string $status Order Status
@@ -293,6 +441,7 @@ class Order implements ArrayAccess
      */
     public function setStatus($status)
     {
+<<<<<<< HEAD
         $allowed_values = array('placed', 'approved', 'delivered');
         if (!in_array($status, $allowed_values)) {
             throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'placed', 'approved', 'delivered'");
@@ -302,15 +451,30 @@ class Order implements ArrayAccess
         return $this;
     }
 
+=======
+        $allowed_values = array("placed", "approved", "delivered");
+        if (!in_array($status, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'placed', 'approved', 'delivered'");
+        }
+        $this->status = $status;
+        return $this;
+    }
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets complete
      * @return bool
      */
     public function getComplete()
     {
+<<<<<<< HEAD
         return $this->container['complete'];
     }
 
+=======
+        return $this->complete;
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Sets complete
      * @param bool $complete 
@@ -318,17 +482,27 @@ class Order implements ArrayAccess
      */
     public function setComplete($complete)
     {
+<<<<<<< HEAD
         $this->container['complete'] = $complete;
 
+=======
+        
+        $this->complete = $complete;
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
         return $this;
     }
     /**
      * Returns true if offset exists. False otherwise.
+<<<<<<< HEAD
      * @param  integer $offset Offset
+=======
+     * @param  integer $offset Offset 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return boolean
      */
     public function offsetExists($offset)
     {
+<<<<<<< HEAD
         return isset($this->container[$offset]);
     }
 
@@ -345,11 +519,30 @@ class Order implements ArrayAccess
     /**
      * Sets value based on offset.
      * @param  integer $offset Offset
+=======
+        return isset($this->$offset);
+    }
+  
+    /**
+     * Gets offset.
+     * @param  integer $offset Offset 
+     * @return mixed 
+     */
+    public function offsetGet($offset)
+    {
+        return $this->$offset;
+    }
+  
+    /**
+     * Sets value based on offset.
+     * @param  integer $offset Offset 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @param  mixed   $value  Value to be set
      * @return void
      */
     public function offsetSet($offset, $value)
     {
+<<<<<<< HEAD
         if (is_null($offset)) {
             $this->container[] = $value;
         } else {
@@ -360,13 +553,27 @@ class Order implements ArrayAccess
     /**
      * Unsets offset.
      * @param  integer $offset Offset
+=======
+        $this->$offset = $value;
+    }
+  
+    /**
+     * Unsets offset.
+     * @param  integer $offset Offset 
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
      * @return void
      */
     public function offsetUnset($offset)
     {
+<<<<<<< HEAD
         unset($this->container[$offset]);
     }
 
+=======
+        unset($this->$offset);
+    }
+  
+>>>>>>> aeceb658d4ba69e49d60a9d57c324b11c1d4cd9b
     /**
      * Gets the string presentation of the object
      * @return string
